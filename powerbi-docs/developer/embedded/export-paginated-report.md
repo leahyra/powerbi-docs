@@ -369,7 +369,7 @@ private async Task<ExportedFile> ExportPaginatedReport(
 
   - Without service principal profile, 250 requests per min
     
-  - With service principal profile, 25 request per min. 
+  - With service principal profile, 25 requests per minute.
     
 ## Related content
 
