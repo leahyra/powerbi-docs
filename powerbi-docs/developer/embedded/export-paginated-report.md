@@ -367,7 +367,7 @@ private async Task<ExportedFile> ExportPaginatedReport(
 
 * Throttling is in place for Exporting paginated report for following cases:
 
-  - Without service principal profile, 250 requests per min
+  - Without service principal profile, 250 requests per minute.
     
   - With service principal profile, 25 requests per minute.
     
