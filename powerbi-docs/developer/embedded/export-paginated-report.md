@@ -365,7 +365,7 @@ private async Task<ExportedFile> ExportPaginatedReport(
 
 * The file share URL hyperlink (file share /UNC path) doesn't works when exporting a published paginated report on Power BI service online.  
 
-* Throttling is in place for Exporting paginated report for following cases:
+* Throttling is in place for exporting paginated report for following cases:
 
   - Without service principal profile, 250 requests per minute.
     
