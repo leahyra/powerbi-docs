@@ -355,7 +355,7 @@ private async Task<ExportedFile> ExportPaginatedReport(
 > - The **XMLA Endpoint** setting for the capacity must be enabled by the capacity admin (set to **Read** or **Read Write**).
 > - The tenant-level setting **Allow XMLA endpoints and Analyze in Excel with on-premises semantic models** must be enabled in the admin portal.
 >
-> Both settings are enabled by default. If either is turned off, the export fails with a connection error. For more information, see [Semantic model connectivity and management with the XMLA endpoint](/power-bi/enterprise/service-premium-connect-tools).
+> Both settings are enabled by default. If either setting is turned off, the export fails with a connection error. For more information, see [Semantic model connectivity and management with the XMLA endpoint](/power-bi/enterprise/service-premium-connect-tools).
 
 * Exporting a paginated report that has a Power BI semantic model as its data source, isn't supported in the following cases:
 
