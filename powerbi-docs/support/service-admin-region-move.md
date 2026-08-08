@@ -134,6 +134,14 @@ Be sure to provide contact details for someone who can act as the point of conta
 
 Support reviews the submitted information, including your tenant object ID, current data region, and target data region. After details are confirmed, we coordinate the proposed migration time frame with you.
 
+## Self-serve tenant remap
+
+The self-serve remap feature is enabled for a limited number of customers. After Microsoft Support reviews the information in your request, Support enables the **Tenant Remap** page in the Power BI Admin Portal.
+
+After the feature is enabled, you can select your intended target region, clean up the tenant to prepare for the region move, provide authorization, and execute the remap. When the remap is executing, the tenant experiences up to 30 minutes of downtime, during which users can't access Power BI or Microsoft Fabric on the tenant.
+
+After the remap execution completes, Power BI and Fabric are accessible again. It can take up to one hour after execution completes before the region change fully propagates throughout the tenant. After you confirm that the remap succeeded and the new home region is correct, continue to the [After the region move](https://learn.microsoft.com/power-bi/support/service-admin-region-move#after-the-region-move) section.
+
 ## After the region move
 
 After the region move is complete, the support team contacts you to confirm the migration succeeded. Your tenant is now in the new region, but it contains no data or configuration—everything must be restored from your backups.
