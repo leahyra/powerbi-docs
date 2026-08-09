@@ -16,13 +16,13 @@ ai-usage: ai-assisted
 
 # Embed a report web part in SharePoint Online
 
-The Power BI report web part for SharePoint Online allows you to embed interactive Power BI reports in SharePoint Online pages.
+The Power BI report web part for SharePoint Online allows you to embed interactive Power BI reports and visuals in SharePoint Online pages.
 
-When you use the **Embed in SharePoint Online** option, the embedded reports respect all item permissions and data security through [row-level security (RLS)](/fabric/security/service-admin-row-level-security), so you can easily create secure internal portals.
+When you use the **Embed in SharePoint Online** option, the embedded reports and visuals respect all item permissions and data security through [row-level security (RLS)](/fabric/security/service-admin-row-level-security), so you can easily create secure internal portals.
 
 ## Prerequisites
 
-For **Embed report in SharePoint Online** reports to work:
+For **Embedding a report in SharePoint Online** to work:
 
 * The Power BI web part for SharePoint Online requires [Modern Pages](https://support.microsoft.com/office/allow-or-prevent-creation-of-modern-site-pages-by-end-users-c41d9cc8-c5c0-46b4-8b87-ea66abc6e63b).
 * To use an embedded report, users must sign in to the Power BI service to activate their Power BI license.
@@ -31,24 +31,9 @@ For **Embed report in SharePoint Online** reports to work:
 * For [Embedding for your customers (app owns data)](../../developer/embedded/embedded-analytics-power-bi.md#embed-for-your-customers) customers, there are no licensing requirements for the end user.
 * SharePoint Embed is now supported in air gap environments.
 
-## Embed your report
+## Embed your report or visual
 
-To embed your report into SharePoint Online, you need to get the report URL and use it with SharePoint Online's Power BI web part.
-
-### Get a report URL
-
-1. Open a report in the Power BI service.
-
-2. On the **File** menu, select **Embed report** > **SharePoint Online**.
-
-    ![Screenshot showing More options menu with SharePoint Online highlighted.](media/service-embed-report-spo/power-bi-more-options-sharepoint-online.png)
-
-3. Copy the report URL from the dialog box.
-
-    ![Screenshot of the Embed link dialog with the report link highlighted.](media/service-embed-report-spo/powerbi-embed-link-sharepoint.png)
-
-> [!NOTE]
-> [URL filters](../service-url-filters.md) are supported with the SharePoint Online web part. Users must manually append the filters to the URL, as auto-append isn't currently supported.
+To embed your report or visual into SharePoint Online, you can directly browse workspaces and reports within SharePoint Online or get the report URL. 
 
 ### Add the Power BI report to a SharePoint Online page
 
@@ -60,25 +45,54 @@ To embed your report into SharePoint Online, you need to get the report URL and 
 
     ![Screenshot of the SharePoint window. Pages is highlighted in the navigation pane. Site page is selected.](media/service-embed-report-spo/powerbi-sharepoint-new-page.png)
 
-2. Select the **+** in **New** dropdown menu. In the **Data analysis** section, select **Power BI** web part.
+1. Select the **+** in **New** dropdown menu. In the **Data analysis** section, select **Power BI** web part.
 
-    ![Screenshot of the Data analysis section showing Power BI selected.](media/service-embed-report-spo/powerbi-sharepoint-new-web-part.png)
+    ![Screenshot of the Data analysis section showing Power BI selected.](media/service-embed-report-spo/power-bi-sharepoint-new-web-part.png)
 
-3. Select **Add report**.
+1. Select **Add content** within the Power BI web part.
 
-    ![Screenshot of the SharePoint new report dialog asking to include a report on your page with add report button displayed.](media/service-embed-report-spo/add-powerbi-report.png)  
+    ![Screenshot of the SharePoint new report dialog asking to include a content on your page with add report button displayed.](media/service-embed-report-spo/power-bi-add-powerbi-report.png)  
 
-4. Paste the previously copied report URL into the **Power BI report link** field. The report loads automatically.
+1. Select your report by adding the URL or browsing your workspace. 
 
-    ![Screenshot of the SharePoint new web part properties with Power BI report link highlighted.](media/service-embed-report-spo/powerbi-sharepoint-new-web-part-properties.png)
+    ![Screenshot of the SharePoint new web part properties with options to select a report.](media/service-embed-report-spo/power-bi-sharepoint-new-web-part-properties.png)
 
-5. Select **Publish** to make the change visible to your SharePoint Online users.
+#### Select a report via URL
 
-    ![Screenshot of the Power Power BI report link showing the Publish option selected.](media/service-embed-report-spo/powerbi-sharepoint-report-loaded.png)
+1. Open a report in the Power BI service.
+
+1. On the **File** menu, select **Embed report** > **SharePoint Online**.
+
+   ![Screenshot showing More options menu with SharePoint Online highlighted.](media/service-embed-report-spo/power-bi-more-options-sharepoint-online.png)
+
+1. Copy the report URL from the dialog box and paste it into the SharePoint content menu. 
+
+   ![Screenshot of the Embed link dialog with the report link highlighted.](media/service-embed-report-spo/powerbi-embed-link-sharepoint.png)
+
+> [!NOTE]
+> [URL filters](../service-url-filters.md) are supported with the SharePoint Online web part. Users must manually append the filters to the URL, as auto-append isn't currently supported.
+
+#### Select a report via Browse workspaces
+
+1. Select **Browse workspaces**.
+       
+1. A new **Workspace** drop down appears. Select the workspace you want to embed content from.
+       
+1. Once you select a workspace, choose a report to embed from the **Report** drop down.
+       
+1. To embed a specific report page, select the report page from the **Report Page** drop down.
+
+   ![Screenshot of the new option to select workspaces, reports, and report page.](media/service-embed-report-spo/power-bi-sharepoint-select-workspace.png)
+
+1. Enable the **Embed a single visual** toggle to embed a visual from a report. Use the **Visual** dropdown to select the visual to embed.
+
+   ![Screenshot of the new option to embed a visual.](media/service-embed-report-spo/power-bi-sharepoint-select-visual.png)
+   
+1. Select **Publish changes** in the top right to make the change visible to your SharePoint Online users.
 
 ## Grant access to reports
 
-Embedding a report in SharePoint Online doesn't automatically give users permission to view the report - you need to set view permissions in Power BI.
+Embedding Power BI content in SharePoint Online doesn't automatically give users permission to view the report. You need to set view permissions in Power BI.
 
 > [!IMPORTANT]
 > Make sure to review who can see the report within the Power BI service, and grant access to those that aren't listed.
@@ -140,23 +154,25 @@ Here are the settings you can adjust for the Power BI web part for SharePoint On
 | Display |Adjusts how the report fits within the SharePoint Online page. |
 | Show Nav Pane |Shows or hides the page nav pane. |
 | Show Filter Pane |Shows or hides the filter pane. |
+| Show Action Bar |Shows or hides the action menu at the top of embedded content. |
+| Show in mobile or email view |Enables or disables users from viewing content in mobile or email view. |
 
-## Reports that don't load
+## Reports or visuals that don't load
 
-If your report doesn't load within the Power BI web part, you might see the following message:
+If your report or visual doesn't load within the Power BI web part, you might see the following message:
 
 ![Screenshot of the SharePoint page with the Power Bi report showing the content isn't available message.](media/service-embed-report-spo/powerbi-sharepoint-report-not-found.png)
 
 There are two common reasons for this message.
 
-1. You don't have report access.
-2. The report was deleted.
+- You don't have report access.
+- The report or visual was deleted.
 
 Contact the SharePoint Online page owner to help resolve the issue.
 
 ## Licensing
 
-Users viewing a report in SharePoint need either a **Power BI Pro or Premium Per User (PPU) license** or the content needs to be in a workspace that's in a **[Power BI Premium capacity (EM or P SKU)](/power-bi/enterprise/service-premium-what-is#capacities-and-skus)**.
+Users viewing Power BI content in SharePoint need either a **Power BI Pro or Premium Per User (PPU) license** or the content needs to be in a workspace that's in a **[Power BI Premium capacity (EM or P SKU)](/power-bi/enterprise/service-premium-what-is#capacities-and-skus)**.
 
 ## Enable Copilot in embedded reports in SharePoint
 You can activate Copilot for embedded reports by selecting the "Enable Copilot" checkbox in the embedded reports dialog. Keep in mind that this feature requires an active Copilot tenant switch and either Power BI Premium or paid Fabric capacity in your workspace. Once enabled, users can interact directly with Copilot within the embedded report.
