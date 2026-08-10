@@ -174,7 +174,7 @@ Here's an example for supplying an effective identity (user name) with an access
 
 ## Concurrent requests
 
-The `exportToFile` supports a limited number of concurrent requests. The maximum number of [concurrent paginated report render requests](../../paginated-reports/paginated-capacity-planning.md#concurrent-requests) is 500. To avoid exceeding the limit and getting a Too Many Requests (429) error, either distribute the load over time or across capacities.
+The `exportToFile` supports a limited number of concurrent requests. The maximum number of [concurrent paginated report render requests](../../paginated-reports/paginated-capacity-planning.md#concurrent-requests) is 250. To avoid exceeding the limit and getting a Too Many Requests (429) error, either distribute the load over time or across capacities.
 
 With [Premium Per User (PPU)](../../enterprise/service-premium-per-user-faq.yml), the `exportToFile` API allows just *one* request in a five-minute window. Multiple requests within the five-minute window result in a *Too Many Requests* (429) error.
 
@@ -365,6 +365,12 @@ private async Task<ExportedFile> ExportPaginatedReport(
 
 * The file share URL hyperlink (file share /UNC path) doesn't works when exporting a published paginated report on Power BI service online.  
 
+* Throttling is in place for exporting paginated report for following cases:
+
+  - Without service principal profile, 250 requests per minute.
+    
+  - With service principal profile, 25 requests per minute.
+    
 ## Related content
 
 Review how to embed content for your customers and your organization:
