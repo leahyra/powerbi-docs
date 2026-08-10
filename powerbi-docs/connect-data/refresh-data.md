@@ -328,7 +328,7 @@ By default, Power BI sends refresh failure notifications to the semantic model o
 Specify additional recipients for scheduled refresh failure notifications by using the **Email these contacts when the refresh fails** textbox. Specified recipients receive refresh failure notifications via email and push notifications to the mobile app, just like the semantic model owner does. Specified recipients might include a colleague taking care of your semantic models while you're on vacation, or the email alias of your support team taking care of refresh issues for your department or organization. Sending refresh failure notifications to others in addition to the semantic model owner helps ensure that issues get noticed and addressed promptly. Push notifications to the mobile apps don't support group aliases.
 
 > [!NOTE]
-> On-demand refreshes and refreshes triggered programmatically such as through Power Automate do not trigger email notifications.
+> On-demand refreshes and refreshes triggered programmatically such as through Power Automate don't trigger email notifications.
 
 Note that Power BI not only sends notifications on refresh failures but also when the service pauses a scheduled refresh due to inactivity. After two months, when no user has visited any dashboard or report (including via an app or embedded scenario) built on the semantic model, Power BI considers the semantic model inactive. In this situation, Power BI sends an email message to the semantic model owner indicating that the service paused the refresh schedule for the semantic model. See the following screenshot for an example of such a notification. For more detail, see [Configure scheduled refresh](refresh-scheduled-refresh.md#scheduled-refresh).
 
