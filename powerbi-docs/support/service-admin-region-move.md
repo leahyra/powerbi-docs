@@ -136,10 +136,10 @@ Support reviews the submitted information, including your tenant object ID, curr
 
 ## Automated deletion scripts
 
-If you have a large number of Fabric items to clean up before tenant remap, download [`Step0.ps1` through `Step6.ps1`](https://github.com/microsoft/fabric-toolbox/tree/main/scripts/tenant-remap-automated-deletion) and follow these steps:
+If you need to clean up a large number of Fabric items before tenant remap, download [`Step0.ps1` through `Step6.ps1`](https://github.com/microsoft/fabric-toolbox/tree/main/scripts/tenant-remap-automated-deletion) and follow these steps:
 
 > [!WARNING]
-> The final two steps permanently delete your items, and they can't be restored. Confirm that you backed up all item definitions and data before you continue.
+> The final two steps permanently delete your items, and you can't restore them. Confirm that you backed up all item definitions and data before you continue.
 
 1. Sign in to the Global Admin account in Azure and open an Azure Cloud Shell session. Upload `Step0.ps1` through `Step6.ps1` to this session, and name them exactly as given.
 1. Dot source each script by running the following command:
@@ -150,7 +150,7 @@ If you have a large number of Fabric items to clean up before tenant remap, down
 
 1. Run `Get-WorkspaceIds`. Note where `workspaceIds.txt`, `personalWorkspaceIds.txt`, and `sharedWorkspaceIds.txt` are stored.
 1. Run `Restore-Workspaces -WorkspaceIdsFilePath workspaceIds.txt`. This command assumes that you're in the same folder as when you ran `Get-WorkspaceIds`. If not, make sure that `workspaceIds.txt`, `personalWorkspaceIds.txt`, and `sharedWorkspaceIds.txt` are in the same folder, and run the command again from that folder.
-1. Open the Power BI Admin Portal and go to **Capacity settings**. Find a **Healthy** capacity and copy its ID. In the following command, replace `ID` with the copied ID, then run the following command:
+1. Open the Power BI Admin Portal and go to **Capacity settings**. Find a **Healthy** capacity and copy its ID. In the following command, replace `ID` with the copied ID, and then run the following command:
 
    ```powershell
    Set-WorkspacesToCapacity -WorkspaceIdsFilePath workspaceIds.txt -CapacityId ID
@@ -169,7 +169,7 @@ If you have a large number of Fabric items to clean up before tenant remap, down
    Add-AdminOnPersonalWorkspaces -PersonalWorkspaceIdsFilePath personalWorkspaceIds.txt
    ```
 
-1. Run `Remove-AllActiveArtifacts -WorkspaceIdsFilePath workspaceIds.txt`. This step permanently deletes your items, and they can't be restored after executing the command. When prompted, type the confirmation word `YES`.
+1. Run `Remove-AllActiveArtifacts -WorkspaceIdsFilePath workspaceIds.txt`. This step permanently deletes your items, and you can't restore them after executing the command. When prompted, type the confirmation word `YES`.
 1. Run `Remove-AllSoftDeletedArtifacts -WorkspaceIdsFilePath workspaceIds.txt`. When prompted, type the confirmation word `YES`.
 
 ## Self-serve tenant remap
