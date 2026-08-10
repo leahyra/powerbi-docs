@@ -134,6 +134,52 @@ Be sure to provide contact details for someone who can act as the point of conta
 
 Support reviews the submitted information, including your tenant object ID, current data region, and target data region. After details are confirmed, we coordinate the proposed migration time frame with you.
 
+## Automated deletion scripts
+
+If you need to clean up a large number of Fabric items before tenant remap, download [`Step0.ps1` through `Step6.ps1`](https://github.com/microsoft/fabric-toolbox/tree/main/scripts/tenant-remap-automated-deletion) and follow these steps:
+
+> [!WARNING]
+> The final two steps permanently delete your items, and you can't restore them. Confirm that you backed up all item definitions and data before you continue.
+
+1. Sign in to the Global Admin account in Azure and open an Azure Cloud Shell session. Upload `Step0.ps1` through `Step6.ps1` to this session, and name them exactly as given.
+1. Dot source each script by running the following command:
+
+   ```powershell
+   . ./Step0.ps1; . ./Step1.ps1; . ./Step2.ps1; . ./Step3.ps1; . ./Step4.ps1; . ./Step5.ps1; . ./Step6.ps1
+   ```
+
+1. Run `Get-WorkspaceIds`. Note where `workspaceIds.txt`, `personalWorkspaceIds.txt`, and `sharedWorkspaceIds.txt` are stored.
+1. Run `Restore-Workspaces -WorkspaceIdsFilePath workspaceIds.txt`. This command assumes that you're in the same folder as when you ran `Get-WorkspaceIds`. If not, make sure that `workspaceIds.txt`, `personalWorkspaceIds.txt`, and `sharedWorkspaceIds.txt` are in the same folder, and run the command again from that folder.
+1. Open the Power BI Admin Portal and go to **Capacity settings**. Find a **Healthy** capacity and copy its ID. In the following command, replace `ID` with the copied ID, and then run the following command:
+
+   ```powershell
+   Set-WorkspacesToCapacity -WorkspaceIdsFilePath workspaceIds.txt -CapacityId ID
+   ```
+
+   If the capacity becomes full, find another healthy capacity and repeat the process until all workspaces are assigned to a capacity.
+1. Run the following command:
+
+   ```powershell
+   Add-AdminOnSharedWorkspaces -SharedWorkspaceIdsFilePath sharedWorkspaceIds.txt
+   ```
+
+1. Run the following command:
+
+   ```powershell
+   Add-AdminOnPersonalWorkspaces -PersonalWorkspaceIdsFilePath personalWorkspaceIds.txt
+   ```
+
+1. Run `Remove-AllActiveArtifacts -WorkspaceIdsFilePath workspaceIds.txt`. This step permanently deletes your items, and you can't restore them after executing the command. When prompted, type the confirmation word `YES`.
+1. Run `Remove-AllSoftDeletedArtifacts -WorkspaceIdsFilePath workspaceIds.txt`. When prompted, type the confirmation word `YES`.
+
+## Self-serve tenant remap
+
+Microsoft enables the self-serve remap feature for a limited number of customers. After Microsoft Support reviews the information in your request, they enable the **Tenant Remap** page in the Power BI Admin Portal.
+
+When the feature is enabled, you can select your target region, clean up the tenant to prepare for the region move, provide authorization, and execute the remap. When the remap is executing, the tenant experiences up to 30 minutes of downtime, during which users can't access Power BI or Microsoft Fabric on the tenant.
+
+After the remap execution completes, Power BI and Fabric are accessible again. It can take up to one hour after execution completes before the region change fully propagates throughout the tenant. After you confirm that the remap succeeded and the new home region is correct, continue to the [After the region move](/power-bi/support/service-admin-region-move#after-the-region-move) section.
+
 ## After the region move
 
 After the region move is complete, the support team contacts you to confirm the migration succeeded. Your tenant is now in the new region, but it contains no data or configuration—everything must be restored from your backups.
