@@ -383,7 +383,7 @@
       href: ./report-builder-data.md
     - name: Supported data sources
       href: ./paginated-reports-data-sources.md
-    - name: Connect via Get Data
+    - name: Connect via Power Query
       href: ./report-builder/connect-snowflake-databricks-power-query-online.md
     - name: Use the relational query designer
       href: ./report-builder/relational-query-designer-user-interface-report-builder.md
