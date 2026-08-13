@@ -7,7 +7,8 @@ ms.reviewer: zoedouglas
 ms.service: powerbi
 ms.subservice: powerbi-service
 ms.topic: concept-article
-ms.date: 04/03/2026
+ms.date: 08/11/2026
+ai-usage: ai-assisted
 LocalizationGroup: Create reports
 #customer intent: As a Power BI user, I want to learn how to create reports that allow readers to edit the data source so that end users have interactive access to their data.
 ---
@@ -76,6 +77,7 @@ Currently, the following limitations apply to translytical task flows:
 
 * User data functions must return a `str` type to be added to a report.
 * Power BI Embedded is supported only for secure embed scenarios.
+* Data function buttons don't automatically rebind across workspaces. The button stores an explicit reference to a specific **Workspace**, **Function set**, and **Data function**. When you deploy the report with [deployment pipelines](/fabric/cicd/deployment-pipelines/intro-to-deployment-pipelines) or move it to another workspace, the reference stays pinned to the original user data function—even if a function with the same name exists in the target workspace. Update the button's data function reference in the target report after deployment. For more information, see [Understand dependency binding in cross-workspace deployment](/fabric/cicd/cross-workspace-dependency-binding).
 
 The following service limitations can also affect your translytical task flows:
 
