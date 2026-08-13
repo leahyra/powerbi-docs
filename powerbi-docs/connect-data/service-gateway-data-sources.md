@@ -124,6 +124,9 @@ Also give users and security groups administrative access to the gateway.
 
 Add users to each data source you want to grant access to. Each data source has its own user list.
 
+> [!NOTE]
+> A user sees only connections they have access to in the **Connections** tab of **Manage connections and gateways**. Connections that the user isn't part of don't appear in this page, even when the user is a tenant administrator and the **Tenant administration** toggle is enabled.
+
 ### Remove users from a data source
 
 On the **Manage users** tab, remove users or security groups for the data source.
