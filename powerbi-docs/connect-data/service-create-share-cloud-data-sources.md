@@ -70,6 +70,9 @@ To share a shareable cloud connection, take the following steps:
 
 1. Select **Share**.
 
+> [!NOTE]
+> A user will only see connections to which they have access in **Connections** tab of **Manage connections and gateways**. Connections that the user is not part of will not be listed in this page, even when the user is a Tenant Administrator and the **Tenant administration** toggle is enabled.
+
 ## Assign a shareable cloud connection to a semantic model
 
 After you create a shareable cloud connection, you can assign it to a semantic model.
