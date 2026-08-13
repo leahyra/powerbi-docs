@@ -10,7 +10,7 @@ ms.date: 12/19/2025
 #customer intent: As a Power BI user I want to learn how to show the same goal on multiple Power BI scoredcards.
 ---
 
-# Create linked goals in the Power BI service (preview)
+# Create linked goals in the Power BI service
 
 **Applies to:** [!INCLUDE [applies-to-service](../includes/applies-to-version/service.md)]
 
@@ -26,7 +26,7 @@ Say you have build access to a scorecard, meaning you can build content with the
 
 1. Open a scorecard and select **Edit**.
 1. Select the **New** button.
-1. Select **Link to existing goal (preview)**.
+1. Select **Link to existing goal**.
 
     :::image type="content" source="media/service-goals-linked-goals/linked-goals-1.png" alt-text="Screenshot of the option to link a goal in a scorecard.":::
 
