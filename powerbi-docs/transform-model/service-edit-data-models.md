@@ -3,11 +3,11 @@ title: Edit semantic models in the Power BI service
 description: Learn how to edit semantic models in the Power BI service, including editing relationships, creating DAX measures, managing RLS, and more.
 author: kgremban
 ms.author: kgremban
-ms.reviewer: emlisa
+ms.reviewer: monicacl
 ms.service: powerbi
 ms.subservice: pbi-transform-model
 ms.topic: how-to
-ms.date: 01/12/2025
+ms.date: 08/14/2026
 LocalizationGroup: Transform and shape data
 ---
 
@@ -41,19 +41,13 @@ You can open an existing semantic model in the following ways:
 
     ![Screenshot of opening the data model from the OneLake catalog.](media/service-edit-data-models/open-model-from-onelake-view.png)
 
-
-
 * From the semantic model details page, select **Open semantic model**.
 
     ![Screenshot of opening the data model from the details view.](media/service-edit-data-models/open-model-from-details-view.png)
 
-
-
 * From **edit mode** for a report connected to the semantic model, select **Open semantic model** to open the corresponding model in another tab.
 
     ![Screenshot of opening the data model from the Report view.](media/service-edit-data-models/open-model-from-report-view.png)
-
-
 
 ## Viewing mode
 
@@ -169,11 +163,34 @@ You can shape data for your import semantic models with the full Power Query edi
 
 ### Refresh
 
-You can refresh both the schema and data for your import semantic models by selecting **Refresh** in the ribbon. 
+Select **Refresh** in the ribbon to refresh your semantic model. By default, Power BI performs a schema sync followed by a data refresh.
 
-:::image type="content" source="media/service-edit-data-models/service-edit-data-models-38.png" alt-text="Screenshot of refresh dialog." lightbox="media/service-edit-data-models/service-edit-data-models-38.png":::
+Select the **Refresh** dropdown in Model view to choose from the following options:
 
-If you select ‘Cancel’ to cancel the refresh, all data loaded into the model prior to the cancellation remains in the model. If desired, you can use [semantic model version history](../transform-model/service-semantic-model-version-history.md) to recover the model to a point before the refresh was initiated. Additional changes can't be made to the semantic model while a refresh is ongoing.
+:::image type="content" source="media/service-edit-data-models/refresh-model.png" alt-text="Screenshot that shows the refresh menu for a semantic model.":::
+
+> [!NOTE]
+> In viewing mode, only the **Refresh data** option is available. To access all refresh options, switch to editing mode. This restriction helps prevent unintended schema changes while viewing a semantic model.
+
+- **Refresh schema and data**: Updates the semantic model schema to match the data source and then refreshes data.
+
+- **Sync schema only**: Updates the semantic model schema to reflect source schema changes, such as new columns or data type changes, without refreshing data.
+
+- **Refresh data only**: Refreshes data while preserving the current semantic model schema.
+
+> [!CAUTION]
+> Refresh enhancements aren't currently supported for semantic models that contain DirectQuery tables. Support for DirectQuery models in web modeling is coming soon.
+
+You can also control refresh granularity at the **table level**. Go to Model explorer and select an individual table to refresh its schema, data, or both, instead of refreshing the entire semantic model.
+
+:::image type="content" source="media/service-edit-data-models/refresh-table.png" alt-text="Screenshot that shows the refresh menu for a table.":::
+
+> [!CAUTION]
+> For Direct Lake semantic models, table-level refresh isn't supported. When you refresh an individual table, Power BI refreshes all tables that use the same data source. However, Direct Lake refresh operations are typically much faster than import model refreshes because they don't require data to be imported into the semantic model.
+
+If you select **Cancel** to cancel the refresh, all data loaded into the model before the cancellation remains in the model. If desired, you can use [semantic model version history](../transform-model/service-semantic-model-version-history.md) to recover the model to a point before the refresh was initiated. You can't make additional changes to the semantic model while a refresh is ongoing.
+
+For more information, see [Data refresh in Power BI](../connect-data/refresh-data.md).
 
 ### Set your own date table
 
@@ -250,7 +267,7 @@ As you made changes to your semantic model, your changes are automatically saved
 
 ## Permissions
 
-*A user must have write and build [semantic model permissions](../connect-data/service-datasets-permissions.md) in order to open and edit the corresponding semantic model in the Power BI service.
+*A user must have write [semantic model permissions](../connect-data/service-datasets-permissions.md) to open and edit the corresponding semantic model in the Power BI service. To create reports based on the semantic model, users must also have Build permission.
 *If [granular access control](../connect-data/service-create-share-cloud-data-sources.md#granular-access-control) is enabled on the semantic model, then users who have write but not owner permissions on the semantic model can only switch to **Editing mode** if they have access to all the underlying data sources for the model. Semantic model owners will always be able to toggle to **Editing mode**. 
 *A user must be the semantic model owner in order to access the **Get data** dialog and add additional import tables to a semantic model.
 
