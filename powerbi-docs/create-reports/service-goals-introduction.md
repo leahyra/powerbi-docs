@@ -63,7 +63,7 @@ The next section is a tabbed list.
 
 ## Change the scorecard view
 
-When you're viewing your scorecard, you can change the view from **List view** to **Compact view**, which is currently in preview.
+When you're viewing your scorecard, you can change the view from **List view** to **Compact view**.
 
 :::image type="content" source="media/service-goals-introduction/metrics-compact-view.png" alt-text="Screenshot showing Compact view menu item.":::
 
@@ -105,6 +105,7 @@ Scorecards have goal-level permissions roles. While workspace permissions give v
   
 - Goals don't support bring your own key (BYOK).
 - Goals don't support row-level security (RLS).
+- A scorecard can have a maximum of 1,000 goals.
 - The maximum number of subgoal levels is four.
 - Goals don't support publish-to-web.
 - The scorecard visual doesn't work in SharePoint embed.

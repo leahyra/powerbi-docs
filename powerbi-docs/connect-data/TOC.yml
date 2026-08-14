@@ -218,7 +218,7 @@
         items: 
         - name: "Get data from files"
           href: service-get-data-from-files.md
-        - name: "Get data from comma separated value (.csv) files"
+        - name: "Get data from comma-separated value (CSV) files"
           href: service-comma-separated-value-files.md
         - name: "Get data from Excel workbook files"
           href: service-excel-workbook-files.md
@@ -238,7 +238,7 @@
           href: service-datasets-across-workspaces.md
         - name: "Provide a semantic model description"
           href: service-dataset-description.md
-        - name: "Share semantic model access (preview)"
+        - name: "Share access to a semantic model"
           href: service-datasets-share.md
         - name: "Semantic model permissions"
           href: service-datasets-permissions.md
@@ -275,13 +275,13 @@
       - name: Incremental refresh
         items:
         - name: Incremental refresh and real-time data for semantic models
-          href: ../connect-data/incremental-refresh-overview.md
+          href: incremental-refresh-overview.md
         - name: Configure incremental refresh and real-time data
-          href: ../connect-data/incremental-refresh-configure.md
+          href: incremental-refresh-configure.md
         - name: Advanced incremental refresh
-          href: ../connect-data/incremental-refresh-xmla.md
+          href: incremental-refresh-xmla.md
         - name: Troubleshoot incremental refresh and real-time data
-          href: ../connect-data/incremental-refresh-troubleshoot.md
+          href: incremental-refresh-troubleshoot.md
       - name: "Manage query refresh"
         href: refresh-include-in-report-refresh.md
       - name: "Query caching in Power BI Premium"
@@ -298,7 +298,7 @@
         href: refresh-excel-file-onedrive.md
       - name: "Refresh a semantic model from a .csv file on OneDrive"
         href: refresh-csv-file-onedrive.md
-      - name: "Refresh a Semantic Model using Data Pipelines (Preview)"
+      - name: "Refresh a semantic model by using data pipelines (preview)"
         href: data-pipeline-templates.md
       - name: "Frequent refreshes using Real-Time Intelligence"
         href: real-time-intelligence-sample.md
@@ -332,8 +332,6 @@
           href: azure-emissions-calculation-methodology.md  
       - name: "Hospital Emergency Response Decision Support Dashboard"
         href: service-connect-to-health-emergency-response.md
-      - name: "Office365Mon"
-        href: service-connect-to-office365mon.md
       - name: "Project Online"
         href: service-connect-to-project-online.md
       - name: "Regional Emergency Response Dashboard"
@@ -351,6 +349,8 @@
       items: 
       - name: "Troubleshoot opening Power BI Desktop"
         href: desktop-error-launching-desktop.md
+      - name: "Troubleshoot sign-in issues in Power BI Desktop"
+        href: desktop-troubleshooting-sign-in.md
       - name: "Troubleshoot refresh scenarios"
         href: refresh-troubleshooting-refresh-scenarios.md
       - name: "Troubleshoot tile errors"
