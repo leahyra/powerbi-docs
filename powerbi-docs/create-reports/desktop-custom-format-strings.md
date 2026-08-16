@@ -7,7 +7,7 @@ ms.reviewer: ''
 ms.service: powerbi
 ms.subservice: pbi-reports-dashboards
 ms.topic: how-to
-ms.date: 02/18/2026
+ms.date: 08/14/2026
 ai-usage: ai-assisted
 LocalizationGroup: Create reports
 ---
@@ -49,6 +49,8 @@ Here are some commonly used format strings to get you started.
 
 > [!IMPORTANT]
 > **Before using these examples:** The new card visual and visual-level formatting currently require .NET syntax, while model-level and element-level formatting use VBA syntax. Numeric formats (like `#,##0`) work the same in both, but date and time formats differ. Also, you must set **Display units** to **None** on the new card visual, or you'll see K/M/B suffixes regardless of your format string. See [Troubleshooting unwanted automatic scaling](#troubleshooting-unwanted-automatic-scaling-k-m-b-suffixes).
+
+To use **None** as the default display units for the entire report when display units aren't explicitly specified, turn on **Default display units to 'none'** in the report's format string locale settings. For more information, see [Set the default format string locale for a Power BI report](power-bi-default-format-string-locale.md#set-default-display-units-to-none).
 
 #### Numeric formats (work at all levels)
 
