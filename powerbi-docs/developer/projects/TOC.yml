@@ -25,6 +25,8 @@
       href: projects-report.md
     - name: "Git integration"
       href: projects-git.md
+    - name: "Edit PBIP files externally and reload"
+      href: projects-external-editing.md
     - name: "Azure DevOps integration"
       href: projects-azdo.md
     - name: "Azure DevOps build pipelines"
