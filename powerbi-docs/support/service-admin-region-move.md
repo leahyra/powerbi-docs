@@ -178,11 +178,11 @@ Microsoft enables the self-serve remap feature for a limited number of customers
 
 When the feature is enabled, you can select your target region, clean up the tenant to prepare for the region move, provide authorization, and execute the remap. When the remap is executing, the tenant experiences up to 30 minutes of downtime, during which users can't access Power BI or Microsoft Fabric on the tenant.
 
-After the remap execution completes, Power BI and Fabric are accessible again. It can take up to one hour after execution completes before the region change fully propagates throughout the tenant. After you confirm that the remap succeeded and the new home region is correct, continue to the [After the region move](/power-bi/support/service-admin-region-move#after-the-region-move) section.
+After remap execution finishes, you can access Power BI and Fabric again. To verify your new home region, follow the steps in [Find the default region for your organization](../admin/service-admin-where-is-my-tenant-located.md). After you confirm the remap succeeded and the new home region is correct, continue to [After the region move](/power-bi/support/service-admin-region-move#after-the-region-move). It can take up to one hour after execution completes before the region change fully propagates throughout the tenant.
 
 ## After the region move
 
-After the region move is complete, the support team contacts you to confirm the migration succeeded. Your tenant is now in the new region, but it contains no data or configuration—everything must be restored from your backups.
+Your tenant is now in the new region, but it contains no data or configuration—everything must be restored from your backups.
 
 ### Restore your tenant
 
