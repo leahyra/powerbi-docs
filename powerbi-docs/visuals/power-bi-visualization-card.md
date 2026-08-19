@@ -792,7 +792,6 @@ During preview, the card visual's default behavior was different to how it now b
 - **Callout image alignment:** During preview, the callout image aligned was constrained to the callout label text, which may leave part of the callout container empty. Now the image aligns to the callout container. 
 - **Background image fit:** During preview, the background image could repeat to fill the container. Now the **image fit** options align with other visual image options of fit, stretch, fill, and center.   
 - **Reference label outer padding:** During preview, **reference labels** had an **outer padding** setting that unintentionally affected the callout area by pushing elements out of place around the divider. Now the **outer padding** setting is removed from **reference labels**.
-- **Fit to space (renamed from Autogrid):** During preview, the visuals would leave an empty column to match the specified number of columns. With the addition of **Fit to space**, it arranges cards to fill the visual container based on the cards present. This setting can be toggled off to return to previous behavior.
 
 ### Format settings
 

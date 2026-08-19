@@ -204,6 +204,9 @@ Add a new page to your report. The new report page canvas is blank and shows the
 
 ### Create report visuals with Q&A
 
+> [!IMPORTANT]
+> Q&A experiences are going away in December 2026. We recommend using [Copilot for Power BI](../create-reports/copilot-introduction.md) for a more advanced and integrated way to query your data with natural language. For more information and recommended alternatives, see [Deprecating Power BI Q&A](https://powerbi.microsoft.com/blog/deprecating-power-bi-qa).
+
 For a quick exploration of your data, try asking a question in the Q&A question box. Q&A lets you ask natural-language queries about your data.
 
 In the Power BI service, you can find the Q&A question box in two places.
