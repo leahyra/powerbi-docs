@@ -22,7 +22,7 @@ The **card visual** in Power BI displays key metrics in a flexible, visually app
 Combining multiple measures and reference labels in one visual improves report performance by reducing visual load time and optimizing underlying queries to the semantic model. You can also use data-driven images to create custom visualizations that respond to your data.
 
 > [!NOTE]
-> The **(new) card visual** became generally available as the **card visual** with the November 2025 Power BI release. Reports with the legacy card visual continue to use the legacy card visual.
+> The **(new) card visual** is generally available as the **card visual**. Reports with the legacy card visual continue to use the legacy card visual.
 
 ## Create a card visual
 
@@ -787,15 +787,16 @@ Differences between Desktop and the service can happen in two scenarios.
 
 ### Default behavior changes from preview
 
-During preview, the card visual's default behavior was different to how it now behaves in general availability. At general availability, we made updates to enhance the layout consistency, visual alignment, and overall user experience. 
+The card visual's default behavior differs from its preview behavior. At general availability and in subsequent updates, we made changes to enhance layout consistency, visual alignment, and the overall user experience.
 
 - **Callout image alignment:** During preview, the callout image aligned was constrained to the callout label text, which may leave part of the callout container empty. Now the image aligns to the callout container. 
 - **Background image fit:** During preview, the background image could repeat to fill the container. Now the **image fit** options align with other visual image options of fit, stretch, fill, and center.   
 - **Reference label outer padding:** During preview, **reference labels** had an **outer padding** setting that unintentionally affected the callout area by pushing elements out of place around the divider. Now the **outer padding** setting is removed from **reference labels**.
+- **Fit to space (renamed from Autogrid):** During preview, the visuals would leave an empty column to match the specified number of columns. With the addition of **Fit to space**, it arranges cards to fill the visual container based on the cards present. This setting can be toggled off to return to previous behavior.
 
 ### Format settings
 
-- The **(new) card visual** is generally available as the **card visual** with the November 2025 Power BI release. If you used the card visual during the preview phase, you might notice behavior or formatting changes that reflect the improvements in the general availability release.
+- The **(new) card visual** is generally available as the **card visual**. If you used the card visual during the preview phase, you might notice behavior or formatting changes that reflect improvements introduced at general availability and in subsequent updates.
 - The new Card visual includes updated default styling. Newly created cards might look different from legacy cards and from cards created during preview, while existing visuals remain unchanged.
 - When formatting the card visual, you might notice that some of the format settings are in a different or new location, or the name of the setting is changed.
 - In earlier versions of the card visual, the **Callout** image was available as part of the **Image card**. This image is now in the **Callout** section of the **Format** pane.
