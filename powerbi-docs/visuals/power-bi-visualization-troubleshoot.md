@@ -183,11 +183,11 @@ This section addresses potential problems that users might encounter with includ
 
 ### Image URLs
 
-If an image within a Power BI report isn't rendering, the [image URL](../create-reports/power-bi-images-tables.md#considerations) might not be anonymously accessible. Power BI requires the image URL to be anonymously accessible without requiring a sign-in to view. Images can't be hosted on sites that require authentication, such as SharePoint or OneDrive.
+If an image within a Power BI report doesn't render, the [image URL](../create-reports/power-bi-images-tables.md#considerations) might not be anonymously accessible. Power BI requires the image URL to be anonymously accessible without requiring a sign-in to view, with two exceptions: OneDrive for home embed codes and [links to image files stored in OneLake](power-bi-onelake-files.md). Power BI doesn't support other sites that require authentication, such as SharePoint or OneDrive for work or school.
 
 To ensure that the image URL is publicly accessible, open the image URL in an InPrivate-mode browser window. If the image loads without requiring a sign-in, you correctly configured the image URL for use in Power BI. Loading images from a local path is also not supported in Power BI Desktop or in the Power BI service.
 
-Likewise, Power BI mobile apps display only if the image URL is anonymously accessible. Again, the image can't be hosted on a site that requires a sign-in, such as SharePoint or OneDrive, even if you can see the image in Power BI Desktop or in the Power BI service.
+Likewise, Power BI mobile apps display images only if the image URL is anonymously accessible or is a OneLake file link. Images hosted on sites that require sign-in, such as SharePoint or OneDrive for work or school, don't display in the mobile apps even if you can see the image in Power BI Desktop or in the Power BI service.
 
 ## Related content
 

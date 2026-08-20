@@ -77,7 +77,7 @@ These visuals help you understand how individual parts contribute to a total.
 
 ### Pie and donut charts
 
-Pie and donut charts show the relationship of parts to a whole. Donut charts have a blank center that allows space for a label or icon. Use these charts when you have a small number of categories.
+Pie and donut charts show the relationship of parts to a whole. Donut charts have an open center that can display a value, such as the total, or space for a label or icon. Use these charts when you have a small number of categories.
 
 For more information, see [Pie and donut charts in Power BI](power-bi-visualization-pie-donut-chart.md).
 
@@ -197,7 +197,7 @@ For more information, see [Slicers in Power BI](power-bi-visualization-slicers.m
 
 ### Image visual
 
-Image visuals display static or dynamic images in your reports. Dynamic images can change based on data values.
+Image visuals display static or dynamic images in your reports. Dynamic images can change based on data values. Image sources include uploads, web URLs, [links to image files in OneLake](power-bi-onelake-files.md), and data-bound fields.
 
 For more information, see [Image visual in Power BI](power-bi-visualization-image-visual.md).
 

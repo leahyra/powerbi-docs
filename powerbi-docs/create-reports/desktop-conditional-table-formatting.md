@@ -214,6 +214,10 @@ Within each icon set, individual icons represent different states (such as posit
 > [!TIP]
 > **Can't find a specific icon?** When you select an icon set, you can customize individual icons by selecting a different icon from any available set. In the **Icons** dialog, select the dropdown next to any rule's icon to see all available icons across all sets. For example, you can find status indicators like a gray circle with a horizontal line (representing "neutral" or "on hold") in the Shapes category.
 
+### Use a custom icon from a URL
+
+By using the **Field value** format style, you can point to a column that contains image URLs to display custom icons instead of built-in ones. The URL can be an anonymously accessible web URL or a [link to an image file stored in OneLake](../visuals/power-bi-onelake-files.md) (for example, `https://onelake.dfs.fabric.microsoft.com/{workspace-id}/{item-id}/Files/{path-to-image}`). Icons must be in BMP, JPG, JPEG, GIF, PNG, or SVG format.
+
 With icons applied to the **Affordability** column by rules, the example table looks like this:
 
 ![Example table with icons applied](media/desktop-conditional-table-formatting/table-formatting-1-default-dialog.png)

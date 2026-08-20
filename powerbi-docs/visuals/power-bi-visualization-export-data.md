@@ -1,5 +1,5 @@
 ---
-title: Export Data from a Power BI Visualization
+title: Export Data From a Power BI Visualization
 description: Learn how to export data from Power BI report visualizations and dashboard tiles to Excel. Discover options for summarized and underlying data exports.
 author: JulCsc
 ms.author: juliacawthra
@@ -7,7 +7,7 @@ ms.reviewer: miguelmyers
 ms.service: powerbi
 ms.subservice: pbi-visuals
 ms.topic: how-to
-ms.date: 07/22/2026
+ms.date: 08/18/2026
 ai-usage: ai-assisted
 ms.custom: sample-Procurement-Analysis
 LocalizationGroup: Visualizations
@@ -151,6 +151,18 @@ If a visual contains *only measures from a measures‑only table*, Power BI can'
 > Export underlying data doesn't include datetime or variations columns. It doesn't include numeric columns if there's an aggregation. Additionally, [visual calculation](../transform-model/desktop-visual-calculations-overview.md) results aren't included.
 
 ---
+
+## Export data from the Power BI mobile app
+
+You can export data from a report visual directly from the Power BI mobile app for iOS and Android.
+
+To export data:
+
+1. Open a report in the Power BI mobile app.
+1. Open the visual in focus mode, or tap **More options** (**…**) on the visual.
+1. Select **Export data**.
+
+The export starts automatically using the supported Excel format for that visual. The exported data reflects your current filters, slicers, drill state, and row-level security. When the file is ready, use your device's sharing options to open, save, or share it.
 
 ## Admin and designer controls for exporting
 

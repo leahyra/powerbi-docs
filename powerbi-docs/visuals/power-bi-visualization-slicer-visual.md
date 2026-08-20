@@ -6,7 +6,7 @@ ms.author: juliacawthra
 ms.service: powerbi
 ms.subservice: pbi-visuals
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 08/01/2026
 ai-usage: ai-assisted
 LocalizationGroup: Visualizations
 ---
@@ -42,7 +42,7 @@ The Slicer visual supports multiple display settings. Select the setting that be
 | **After** | Date, numeric | Filtering values from a specific point onward; slider and input box |
 | **Relative date** | Date | Rolling time periods like "last 7 days" or "this month"; supports static anchor date |
 | **Relative time** | DateTime | Rolling time periods with time precision like "last 5 minutes" |
-| **Date picker** (preview) | Date | Relative date filtering with anchoring on first, last, or today's date; calendar and slider selection |
+| **Date picker** | Date | Relative date filtering with anchoring on first, last, or today's date; calendar and slider selection |
 
 To change the slicer setting:
 
@@ -121,18 +121,13 @@ Report viewers can change the relative options when interacting with the report.
 
 For more information, see [Use a relative time slicer and filter in Power BI](../create-reports/slicer-filter-relative-time.md).
 
-## Date picker (preview)
+## Date picker
 
 The **Date picker** style provides relative date selections that automatically roll forward as time passes, and can be anchored on today, the last date, or the first date of the date column. When you set a relative selection like "last full month," the slicer keeps the date range up to date as time passes. Report viewers can also select any manual date range or single date using a calendar or slider.
 
 :::image type="content" source="media/power-bi-visualization-slicer-visual/date-picker.png" alt-text="Screenshot of a Date picker slicer showing relative date options and a calendar for manual date selection.":::
 
 Date picker supports date columns. It doesn't support hierarchies, so add a single column to the slicer.
-
-> [!NOTE]
-> Date picker is a preview feature. To enable it, go to **File** > **Options and settings** > **Options** > **Preview features** and select **Date picker slicer**.
->
-> During preview, you can only create date picker slicers in Power BI Desktop. However, after you publish a report with a date picker slicer, you can use and edit it in the Power BI service.
 
 ### Create a date picker slicer
 
@@ -162,6 +157,16 @@ Select any date range or single date manually:
 - **Slider**: Drag the slider handles to adjust the date range.
 
 Select **Apply** to filter the report with the selected dates.
+
+### Force a single date selection
+
+To restrict the slicer so report viewers can only select one date at a time, turn on the **Single date** setting:
+
+1. Select the slicer.
+1. In the **Format** pane, expand **Visual** > **Slicer settings** > **Selection controls**.
+1. Turn on **Single date**.
+
+When you turn on **Single date**, the calendar and slider accept only one date selection instead of a range. The relative options also limit to selections that return a single date.
 
 ### Slicer display
 
@@ -197,7 +202,32 @@ The **Values** > **Background color** option also behaves differently depending 
 - **Dropdown**: colors the dropdown box and the flyout's background fill.
 - **Tile**: colors each button's background.
 
-For the **Vertical list** and **Dropdown** settings, you can also update the selection icon color (the check box or radio button) in its own top-level **Selection icon** formatting section.
+### Selection icon color
+
+For the **Vertical list** and **Dropdown** settings, you can update the selection icon (the check box or radio button) color in its own top-level **Selection icon** formatting section.
+
+### Hierarchy
+
+For **Vertical list** and **Dropdown** slicers that use a hierarchy, expand the top-level **Hierarchy** section in the Visual formatting pane to customize the expand and collapse icons:
+
+- **Icon color**: Set the color of the expand and collapse icons. Supports conditional formatting.
+- **Icon**: Choose which icon to use for expand and collapse.
+
+### Dropdown
+
+For the **Dropdown** setting, expand the top-level **Dropdown** section in the Visual formatting pane to customize the dropdown box. These settings apply to the dropdown box in both its collapsed and expanded states.
+
+- **Border color**: Set the border color of the dropdown box. Supports conditional formatting.
+- **Rounded corners**: Set the corner radius of the dropdown box, in pixels.
+- **Open icon color**: Set the color of the icon that opens the dropdown. Supports conditional formatting.
+- **Open icon transparency**: Set the transparency of the open icon.
+
+The dropdown box also supports an accent bar. Expand **Accent bar** to configure:
+
+- **Color**: Set the accent bar color. Supports conditional formatting.
+- **Position**: Choose where the accent bar appears on the dropdown box.
+- **Transparency**: Set the transparency of the accent bar.
+- **Width**: Set the width of the accent bar.
 
 ### Visual options
 

@@ -16,11 +16,11 @@ ai-usage: ai-assisted
 
 **Applies to:** [!INCLUDE [applies-to-desktop-service](../includes/applies-to-version/desktop-service.md)]
 
-With the **relative date slicer**, **relative date filter**, or **date picker** slicer setting, you can apply time-based selections using a date column. For example, you can show only sales data from within the last 30 days or last calendar month. When you view the report, the relative date period is applied and the specified range filters the other visuals on the page. The **Date picker** slicer setting (preview) extends this capability by adding a calendar and slider for manual date selection and offering anchor options based on today, the first date, or the last date in your data.
+By using the **relative date slicer**, **relative date filter**, or **date picker** slicer setting, you can apply time-based selections by using a date column. For example, you can show only sales data from within the last 30 days or last calendar month. When you view the report, the relative date period is applied and the specified range filters the other visuals on the page. The **Date picker** slicer setting extends this capability by adding a calendar and slider for manual date selection and offering anchor options based on today, the first date, or the last date in your data.
 
 :::image type="content" source="media/desktop-slicer-filter-date-range/relative-date-range-slicer-filter-01.png" alt-text="Screenshot showing a sales report and a relative date slicer with the date slicer called out." lightbox="media/desktop-slicer-filter-date-range/relative-date-range-slicer-filter-01.png":::
 
-## Use the Date picker slicer setting (preview)
+## Use the Date picker slicer setting
 
 The **Date picker** slicer setting provides relative date selections similar to the **Relative date** setting, plus a calendar and slider for selecting specific dates or date ranges. Use **Date picker** when you want both relative options and the ability for report viewers to pick a manual date or date range.
 
@@ -35,11 +35,6 @@ When you set a relative selection like "last full month," the slicer keeps the d
 :::image type="content" source="media/power-bi-visualization-slicer-visual/date-picker.png" alt-text="Screenshot of a Date picker slicer showing relative date options and a calendar for manual date selection.":::
 
 To change the slicer setting to **Date picker**, select the slicer, then in the **Format** pane, expand **Visual** > **Slicer settings** > **Options** and select **Date picker** from the **Style** dropdown.
-
-> [!NOTE]
-> Date picker is a [preview feature](power-bi-visualizations-overview.md#preview-visuals). To enable it, go to **File** > **Options and settings** > **Options** > **Preview features** and select **Date picker slicer**.
->
-> During preview, you can only create date picker slicers in Power BI Desktop. After you publish a report with a date picker slicer, you can use and edit it in the Power BI service.
 
 ## Create the relative date range slicer
 
