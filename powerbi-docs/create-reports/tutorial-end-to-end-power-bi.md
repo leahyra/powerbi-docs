@@ -1037,7 +1037,7 @@ Select **Report view** on the left.
    1. With the card selected, in the **Format** pane (paint roller icon), expand **Callout values** or **Title** and change the title to **Adventure Works Cycles Sales - Executive Summary**, set the font size to **20**, and toggle **Bold** to **On**.
 
    > [!TIP]
-   > Use the new **modern visual defaults** (GA in August 2026) to match the polished look of this report. On the **View** tab, select **Modern visual defaults**.
+   > This report uses the Fluent 2 base theme.
 
 ### Match visuals to the leadership questions
 

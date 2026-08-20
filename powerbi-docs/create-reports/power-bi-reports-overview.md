@@ -289,7 +289,7 @@ For more information, see [Add hyperlinks to a table in Power BI](power-bi-hyper
 
 ### Images
 
-Display images in table and matrix cells using image URLs in your data. Images can show product photos, icons, flags, or other visual content.
+Display images in table and matrix cells using image URLs in your data. Images can show product photos, icons, flags, or other visual content. You can use anonymously accessible web URLs or [links to image files stored in OneLake](../visuals/power-bi-onelake-files.md).
 
 For more information, see [Display images in a table, matrix, or slicer](power-bi-images-tables.md).
 

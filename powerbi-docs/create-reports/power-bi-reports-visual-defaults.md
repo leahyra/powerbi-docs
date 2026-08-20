@@ -1,13 +1,13 @@
 ---
 title: Visual defaults in Power BI reports
-description: Learn about base themes in Power BI, including the Fluent 2 preview, Classic 2026, and Classic 2018, and how they define the default look of your report visuals.
+description: Learn about base themes in Power BI, including Fluent 2, Classic 2026, and Classic 2018, and how they define the default look of your report visuals.
 author: JulCsc
 ms.author: juliacawthra
 ms.reviewer: zoedouglas
 ms.service: powerbi
 ms.subservice: pbi-reports-dashboards
 ms.topic: concept-article
-ms.date: 05/01/2026
+ms.date: 08/01/2026
 LocalizationGroup: Create reports
 ---
 # Visual defaults in Power BI reports
@@ -20,33 +20,21 @@ Power BI offers multiple base themes to choose from:
 
 | Base theme | Description |
 |------------|-------------|
-| **Fluent 2 (preview)** | Modern styling aligned with Microsoft Fluent 2 design system |
-| **Classic 2026** | Current default base theme for new reports |
-| **Classic 2018** | Original base theme for legacy compatibility |
+| **Fluent 2** | Default base theme for new reports. Modern styling aligned with the Microsoft Fluent 2 design system. |
+| **Classic 2026** | Previous default base theme. Incremental refresh of Classic 2018. |
+| **Classic 2018** | Original base theme for legacy compatibility. |
 
-## Fluent 2 (preview)
+## Fluent 2
 
-The Fluent 2 base theme introduces a modern look aligned with the Microsoft Fluent 2 design system. This update helps you produce polished reports without manual formatting for each visual.
+The Fluent 2 base theme provides a modern look aligned with the Microsoft Fluent 2 design system. This base theme helps you produce polished reports without manual formatting for each visual. New reports created in Power BI Desktop or the Power BI service use Fluent 2 by default.
 
-<iframe title="Modern Visual Defaults Preview" width="800" height="486" src="https://msit.powerbi.com/view?r=eyJrIjoiYWUzNGY5ZDEtZThkYi00ZDhjLTk1ZjItYzUxMDVhMDljNTg3IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9" frameborder="0" allowFullScreen="true"></iframe>
-
-### Enable the preview
-
-To enable the Fluent 2 base theme:
-
-1. In Power BI Desktop, go to **File** > **Options and Settings** > **Options**.
-1. Select **Preview features**.
-1. Select **Modern visual defaults and customize theme improvements**.
-1. Select **OK** and restart Power BI Desktop.
-
-> [!NOTE]
-> During preview, the Fluent 2 base theme can only be enabled in Power BI Desktop. To use Fluent 2 styling in the Power BI service, create or update the report in Desktop first.
+<iframe title="Modern Visual Defaults" width="800" height="486" src="https://msit.powerbi.com/view?r=eyJrIjoiYWUzNGY5ZDEtZThkYi00ZDhjLTk1ZjItYzUxMDVhMDljNTg3IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9" frameborder="0" allowFullScreen="true"></iframe>
 
 ### Canvas and background
 
 The Fluent 2 base theme updates the default canvas:
 
-- **Canvas size**: New pages default to 1920x1080, giving you more space. The initial page in a report retains the previous default of 1280x720.
+- **Canvas size**: New pages default to 1920x1080, giving you more space.
 - **Background colors**: The wallpaper and background are now shades of grey, providing better contrast and making visuals stand out more clearly.
 
 > [!NOTE]
@@ -104,26 +92,13 @@ Navigator style presets include:
 
 The card visual uses less padding and no reference label background for a cleaner look.
 
-#### Slicers
-
-Slicers have significant styling updates:
-
-- **Default**: Dropdown mode with modern styling
-- **List**: List view mode
-- **Tile**: Tile view mode
-
-Each preset adjusts both the visual style and slicer mode in one selection.
-
-> [!NOTE]
-> During preview, the classic slicer might initially appear as a list with dropdown styling. Reset the slicer to default to switch it to dropdown mode.
-
 #### Small multiples
 
 Small multiples consolidate to the categorical axis. Instead of a 2x2 arrangement, small multiples begin in a 1x4 or 4x1 layout depending on orientation, providing a more logical default view.
 
 ## Classic 2026
 
-Classic 2026 is the current default base theme for new reports created in Power BI Desktop. It includes incremental improvements over Classic 2018 while maintaining compatibility with existing reports.
+Classic 2026 was the default base theme for new reports before Fluent 2. It includes incremental improvements over Classic 2018 while maintaining compatibility with existing reports.
 
 ## Classic 2018
 
@@ -134,14 +109,13 @@ Classic 2018 is the original base theme from Power BI's earlier releases. Report
 
 ## Update to the latest base theme
 
-New reports created after enabling the preview automatically use the latest base theme (Fluent 2).
+New reports created in Power BI Desktop or the Power BI service automatically use the latest base theme (Fluent 2).
 
 For existing reports, you can update to the latest base theme:
 
-1. Go to **View** > **Themes** > **Customize current theme**.
-1. If an update is available, a banner appears at the top of the dialog.
+1. On the **View** ribbon, toggle on the **Theme** pane.
+1. If an update is available, a banner appears in the Theme pane.
 1. Select **Update theme** to apply the latest base theme.
-1. Select **Apply**.
 
 You can also select the **Reset to default** tile (the first theme in the Power BI section of the Themes dropdown) to remove any custom theme and apply the latest base theme to your report.
 
@@ -154,10 +128,9 @@ The **Reset to default** tile in the **View** ribbon's **Themes** dropdown remov
 
 You can switch to a different base theme at any time:
 
-1. Go to **View** > **Themes** > **Customize current theme**.
-1. Select the **Base theme** dropdown.
-1. Choose the base theme you want: **Fluent 2 (preview)**, **Classic 2026**, or **Classic 2018**.
-1. Select **Apply**.
+1. On the **View** ribbon, toggle on the **Theme** pane.
+1. In the **Theme settings** section at the top of the Theme pane, select the **Base theme** dropdown.
+1. Choose the base theme you want: **Fluent 2**, **Classic 2026**, or **Classic 2018**.
 
 Your report visuals update to reflect the new base theme's default styles.
 
@@ -176,15 +149,15 @@ To reset all formatting on a visual, select **Reset to default** in the visual's
 > [!NOTE]
 > **Reset to default** also removes actions on buttons and images, conditional formatting rules, images from URLs or data-bound fields, and other data-bound items like reference labels.
 
-## Customize current theme from the Format pane
+## Customize current theme from the Theme pane
 
-When the preview is enabled, you can customize your report's theme defaults directly from the Format pane. Select away from any visual so nothing is selected on the page. The Format pane displays **Customize current theme** options.
+You can customize your report's theme defaults directly from the Theme pane. On the **View** ribbon, toggle on the **Theme** pane.
 
 Your report updates immediately with each change. Switch between pages to see the impact as you adjust the theme.
 
-The Format pane displays the following options:
+The Theme pane displays the following options:
 
-- **Theme settings**: Open the full theme customization dialog.
+- **Theme settings**: Set the base theme and import, export, or remove a theme.
 - **Colors**: Select a color palette and customize data, structural, sentiment, and divergent colors.
 - **Text**: Customize default text styles for your report.
 - **Visual properties**: Turn visual elements on or off and customize their appearance.
@@ -208,7 +181,7 @@ Expand **Colors** to customize the color scheme for your report:
 
 Expand **Visual properties** to configure defaults that apply to all visuals across your report:
 
-- **Background**: Turn visual backgrounds on or off and customize the color.
+- **Background**: Customize the color and transparency of all visual and group backgrounds.
 - **Border**: Turn borders on or off and customize color, thickness, and corner radius.
 - **Header icons**: Turn header icons on or off and customize their appearance.
 - **Tooltip**: Turn tooltips on or off and customize their appearance.
@@ -229,14 +202,9 @@ Expand **Page** to update page settings across all pages at once:
 
 Export your custom theme for reuse:
 
-1. In the Format pane, expand **Theme settings**.
+1. In the Theme pane, expand **Theme settings**.
 1. Select **Export theme** to save your theme as a JSON file.
 1. Use the exported theme in other reports or add it to your [organizational themes](desktop-organizational-themes.md).
-
-## Considerations and limitations
-
-- During preview, the Fluent 2 base theme can only be enabled in Power BI Desktop. To use Fluent 2 styling in the Power BI service, create or update the report in Desktop first.
-- The **Customize current theme** option and other lower options in the **Themes** dropdown aren't available in the Power BI service.
 
 ## Related content
 

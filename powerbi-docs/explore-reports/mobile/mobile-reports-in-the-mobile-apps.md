@@ -7,7 +7,7 @@ ms.reviewer: ''
 ms.service: powerbi
 ms.subservice: powerbi-mobile
 ms.topic: how-to
-ms.date: 10/01/2025
+ms.date: 08/18/2026
 ai-usage: ai-assisted
 ms.custom: sfi-image-nochange
 ---
@@ -123,6 +123,7 @@ You can perform from these actions from the footer:
 - Open the filter pane to view or modify the filter currently applied to the report.
 - List all pages in the report. Tapping a page name will load and present that page.
 You can move between report pages by swiping from the edge of your screen to the center.
+- Rotate view to switch between portrait and landscape layouts with a single tap, even when your device is locked in portrait orientation. This action is useful for reports that don't have a mobile-optimized layout, which open in portrait by default.
 - View all report actions.
 
 #### All report actions

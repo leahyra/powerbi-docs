@@ -7,9 +7,10 @@ ms.reviewer: cnews
 ms.service: powerbi
 ms.subservice: pbi-reports-dashboards
 ms.topic: concept-article
-ms.date: 05/11/2026
+ms.date: 08/18/2026
 no-loc: [Copilot]
 ms.collection: ce-skilling-ai-copilot
+ai-usage: ai-assisted
 ---
 
 # Summarize a report with Copilot
@@ -59,7 +60,7 @@ After you choose a prompt, select **Enter** and watch Copilot generate your summ
  
 :::image type="content" source="../create-reports/media/copilot-pane-summarize-content/copilot-updated-report-summary-response.png" alt-text="Screenshot showing and updated view of the report summary response." lightbox="../create-reports/media/copilot-pane-summarize-content/copilot-updated-report-summary-response.png":::
 
-Copilot uses Azure OpenAI to look at the visual metadata on the report and create a natural language summary. By default, Copilot summarizes visuals across the entire report. You can adjust the scope of the summary by specifying the prompt.  The summaries give a general overview of the data that's currently visualized. 
+Copilot uses Azure OpenAI to look at the visual metadata on the report and create a natural language summary. By default, Copilot summarizes visuals across the entire report. This includes visuals that are hidden by default and made visible by a display-only report bookmark—Copilot reads them in place with no changes to the bookmark state, and RLS and OLS permissions remain enforced. You can adjust the scope of the summary by specifying the prompt.  The summaries give a general overview of the data that's currently visualized. 
 
 ## Additional entry points for Copilot summaries
 

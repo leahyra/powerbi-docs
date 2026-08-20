@@ -58,10 +58,13 @@ For this example, create an image visual starting from the Visualizations pane.
 
    :::image type="content" source="media/power-bi-visualization-image-visual/build-image-visual-desktop-step-1.png" alt-text="Screenshot showing the Visualizations pane with the Build visual tab and image visual icon highlighted, and a visual placeholder on the canvas." lightbox="media/power-bi-visualization-image-visual/build-image-visual-desktop-step-1.png":::
 
-1. To add an image to your image visual, use the **Format** pane. From the **Image** tab, expand the **Style** card. Then, expand the **Image** controls to access the **Image source** dropdown. Choose **Upload image** to add a file from your device, **Enter URL** to link to an online image, or **Select from data** to bind the image visual to an image in your data model. For this guide, choose **Upload image** and pick an image from your local device. You can also change the image in place from the same control, allowing you to replace the current image without deleting the visual.
+1. To add an image to your image visual, use the **Format** pane. From the **Image** tab, expand the **Style** card. Then, expand the **Image** controls to access the **Image source** dropdown. Choose **Upload image** to add a file from your device, **Enter URL** to link to an online image or a file in OneLake, or **Select from data** to bind the image visual to an image in your data model. For this guide, choose **Upload image** and pick an image from your local device. You can also change the image in place from the same control, so you can replace the current image without deleting the visual.
 
    > [!TIP]
    > Large image files might affect report performance.
+
+   > [!NOTE]
+   > **Enter URL** accepts anonymously accessible web URLs and [links to image files stored in OneLake](power-bi-onelake-files.md). OneLake file links work even though they require authentication - Power BI signs in on your behalf when the report loads.
 
 1. After uploading an image from your device, while still on the **Format** pane, you have access to a full suite of controls to customize the image from the **Image** tab. Take some time to explore all the customization options available. You can specify a **Corner radius** using the **Shape** controls, stylize a border with the **Border** controls, or include a **Background color** using the **Background** controls. Use the **Image fit** control to choose how the image displays within the visual bounds. For more information about fit options, see [Image fit modes](#image-fit-modes). This array of options allows you to tailor the image's appearance and functionality to your specific requirements.
 

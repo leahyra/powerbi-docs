@@ -106,30 +106,16 @@ The following table shows the available built-in report themes.
 
 | Built-in report theme | Default color sequence |
 |------ |---------- |
-| Default | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-default.png" alt-text="Screenshot of the color sequence for the Default theme.":::|
-| Highrise | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-highrise.png" alt-text="Screenshot of the color sequence for the Highrise theme.":::|
-| Executive | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-executive.png" alt-text="Screenshot of the color sequence for the Executive theme.":::|
-| Frontier| :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-frontier.png" alt-text="Screenshot of the color sequence for the Frontier theme.":::|
-| Innovate | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-innovative.png" alt-text="Screenshot of the color sequence for the Innovate theme.":::|
+| Reset to default | Removes any custom theme and reverts the report to the base theme. |
 | Bloom | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-bloom.png" alt-text="Screenshot of the color sequence for the Bloom theme.":::|
-| Tidal| :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-tidal.png" alt-text="Screenshot of the color sequence for the Tidal theme.":::|
-| Temperature | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-temperature.png" alt-text="Screenshot of the color sequence for the Temperature theme.":::|
-| Solar| :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-solar.png" alt-text="Screenshot of the color sequence for the Solar theme.":::|
 | Divergent | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-divergent.png" alt-text="Screenshot of the color sequence for the Divergent theme.":::|
-| Storm | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-storm.png" alt-text="Screenshot of the color sequence for the Storm theme.":::|
-| Classic | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-classic.png" alt-text="Screenshot of the color sequence for the Classic theme.":::|
-| City park | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-city-park.png" alt-text="Screenshot of the color sequence for the City park theme.":::|
-| Classroom | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-classroom.png" alt-text="Screenshot of the color sequence for the Classroom theme.":::|
-| Color-blind safe | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-colorblind-safe.png" alt-text="Screenshot of the color sequence for the Color blind safe theme.":::|
-| Electric | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-electric.png" alt-text="Screenshot of the color sequence for the Electric theme.":::|
-| High contrast | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-high-contrast.png" alt-text="Screenshot of the color sequence for the High contrast theme.":::|
-| Sunset | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-sunset.png" alt-text="Screenshot of the color sequence for the Sunset theme.":::|
-| Twilight | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-twilight.png" alt-text="Screenshot of the color sequence for the Twilight theme.":::|
-| Accessible default | :::image type="content" source="media/desktop-report-themes/accessible-theme-default.png" alt-text="Screenshot of the color sequence for the Accessible default theme."::: |
-| Accessible city park |:::image type="content" source="media/desktop-report-themes/accessible-theme-city-park.png" alt-text="Screenshot of the color sequence for the Accessible city park theme."::: |
-| Accessible tidal | :::image type="content" source="media/desktop-report-themes/accessible-theme-tidal.png" alt-text="Screenshot of the color sequence for the Accessible tidal theme.":::|
-| Accessible neutral | :::image type="content" source="media/desktop-report-themes/accessible-theme-neutral.png" alt-text="Screenshot of the color sequence for the Accessible neutral theme."::: |
-| Accessible orchid |:::image type="content" source="media/desktop-report-themes/accessible-theme-orchid.png" alt-text="Screenshot of the color sequence for the Accessible orchid theme."::: |
+| Frontier | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-frontier.png" alt-text="Screenshot of the color sequence for the Frontier theme.":::|
+| Innovate | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-innovative.png" alt-text="Screenshot of the color sequence for the Innovate theme.":::|
+| Tidal | :::image type="content" source="media/desktop-report-themes/report-themes-color-scheme-tidal.png" alt-text="Screenshot of the color sequence for the Tidal theme.":::|
+| Copilot default | The theme Copilot uses when it generates report content. |
+
+> [!NOTE]
+> If your tenant uses [organizational themes](desktop-organizational-themes.md), you can specify which theme Copilot uses by default instead.
 
 ## Apply an organizational report theme
 
@@ -137,75 +123,40 @@ More themes may be available in the theme dropdown if your tenant admin adds the
 
 ## Customize the current report theme
 
-In Power BI Desktop, some of the visual options are available to be customized by selecting **Customize current theme**. 
+You can customize colors, text, visual properties, page settings, and the filter pane for the current report directly from the Theme pane in Power BI Desktop or the Power BI service. For details, see [Visual defaults in Power BI reports](power-bi-reports-visual-defaults.md#customize-current-theme-from-the-theme-pane).
 
-You can create the custom theme or edit a custom theme added to the report already from built-in themes, organizational themes, or a theme you already added to your report with **browse for themes**.
-
-1. From the **View** ribbon, select the **Themes** dropdown button and select **Customize current theme**.
-
-   :::image type="content" source="media/desktop-report-themes/customize-current-report-theme.png" alt-text="Screenshot of the Power BI Themes dropdown menu, highlighting Customize current theme.":::
-
-1. A dialog appears where you can make changes to the current theme. You can save your settings as a new theme.
-
-   :::image type="content" source="media/desktop-report-themes/report-themes-07.png" alt-text="Screenshot of the Customize theme dialog.":::
-
-These categories are available in the **Customize theme** dialog:
-
-- **Name and colors**: Theme name and color settings include [theme colors](report-themes-create-custom.md#set-theme-colors), sentiment colors, divergent colors, and [structural colors (Advanced)](report-themes-create-custom.md#set-structural-colors).
-- **Text**: Text settings include font family, size, and color, which sets [the primary text class defaults](report-themes-create-custom.md#set-formatted-text-defaults) for labels, titles, cards and KPIs, and tab headers.
-- **Visuals**: Visual settings include background, border, header, and tooltips.
-- **Page**: Page element settings include wallpaper and background.
-- **Filter pane**: Filter pane settings include background color, transparency, font and icon color, size, and filter cards.
-
-After you make your changes, select **Apply and save** to save your theme. You can now use the theme in the current report or export it with **Save current theme**.
-
-Customizing the current theme in this way is easy but limited. However, you can also make finer adjustments to themes by modifying the custom theme's [JSON file](report-themes-create-custom.md) in a text editor, such a VS Code. Browse for the theme file after making changes to add it to the report.
+For finer control, you can also modify the custom theme's [JSON file](report-themes-create-custom.md) in a text editor such as VS Code and browse for the theme file to add it to the report.
 
 ## Manage the base report theme
 
-The base theme is the underlying default styling that Power BI applies before any customizations. When you apply a custom theme, it layers on top of the base theme. Any styles defined in the custom theme override the corresponding styles in the base theme, while styles not specified in the custom theme fall back to the base theme defaults. The base theme may be updated with Power BI releases. To avoid disrupting existing reports, these changes don't automatically get applied.
+The base theme is the underlying default styling that Power BI applies before any customizations. When you apply a custom theme, it layers on top of the base theme. Power BI might update the base theme with new releases, but existing reports keep their original base theme until you update it.
 
-For more information about available base themes, including the Fluent 2 preview, see [Visual defaults in Power BI reports](power-bi-reports-visual-defaults.md).
-
-To check if you're using the latest and to update base theme, follow these steps.
-
-1. Go to the **View** ribbon, select the **Themes** dropdown, and select **Customize current theme**. 
-
-1. If your theme is out of date, a banner appears at the top of the **Customize theme** dialog, encouraging you to update your base theme.
-
-1. Select **Update theme** to see the changes, and then select **Apply**.
-
-:::image type="content" source="media/desktop-report-themes/update-theme.png" alt-text="Screenshot showing the Update theme option.":::
-
-You can revert this update by selecting undo if you preferred the previous base theme.
+For more information about available base themes and how to update or change your base theme, see [Visual defaults in Power BI reports](power-bi-reports-visual-defaults.md).
 
 ## Save a report theme file
 
-You can save or export the currently applied report theme directly from Power BI Desktop to a theme `JSON` file. After you export a report theme, you can then reuse it in other reports. 
+You can export the currently applied report theme to a `JSON` file from Power BI Desktop or the Power BI service. After you export a report theme, you can reuse it in other reports.
 
-To export the currently applied theme from Power BI Desktop:
+To export the currently applied theme:
 
-1. Select **View** and select the **Themes** dropdown menu.
-
-   :::image type="content" source="media/desktop-report-themes/save-current-theme.png" alt-text="Screenshot of the Themes dropdown menu, highlighting Save current theme.":::
-
-1. Near the bottom of the dropdown menu, select **Save current theme**.
-1. From the **Save As** dialog box, go to a directory in which to save the JSON file, and then select **Save**.
+1. On the **View** ribbon, toggle on the **Theme** pane.
+1. Expand **Theme settings**.
+1. Select **Export theme** to save your theme as a `JSON` file.
 
 ## Apply a custom report theme `JSON` file
 
-Custom theme `JSON` files saved from another report, or shared with you by someone else, can be applied to any other report.
+You can apply custom theme `JSON` files that you save from another report or that someone else shares with you to any other report in Power BI Desktop or the Power BI service.
 
-To install the custom theme `JSON` file: 
+To import a custom theme `JSON` file:
 
-1. Select **Browse for themes** from the **Themes** dropdown menu
-
-1. Go to the location where you downloaded the JSON file, and select it.
+1. On the **View** ribbon, toggle on the **Theme** pane.
+1. Expand **Theme settings**.
+1. Select **Import theme** and choose the `JSON` file.
 
 When successful, Power BI shows a dialog that the import was successful. A dialog also shows when it isn't successful with details on the error in the custom theme file.
 
 > [!TIP]
-> You can find theme files created by others by selecting **Theme gallery** and downloading it to your machine. You can also use online tools or simply use a text editor such as VS Code to create your own or edit an existing custom theme file.
+> To find theme files created by others, browse the [themes gallery](https://community.powerbi.com/t5/Themes-Gallery/bd-p/ThemesGallery) and download a theme to your machine. You can also use online tools or a text editor such as VS Code to create your own or edit an existing custom theme file.
 
 
 ### Custom report theme files you can use right now
@@ -259,32 +210,9 @@ To create your own custom report theme JSON files with complete control over col
 
 ## Considerations and limitations
 
-If you use one of the original themes, the Classic theme, or a custom theme that you import on top of one of these themes, you can't access the text section of the theme dialog box.
-
-Built-in themes affected by this limitation:
-
-- Classic
-- City park
-- Classroom
-- Color blind safe
-- Electric
-- High contrast
-- Sunset
-- Twilight
-
-If you use one of the affected themes and you don't need to modify the text settings, you can safely use the other tabs of the dialog box. However, if you want to use the text classes with one of the affected themes, you have the following options:
-
-- Select the Default theme options to enable the text classes.
-- To keep your current custom theme and enable the text tab:
-    1. Export your current theme.
-    1. Select the default theme.
-    1. Import the custom theme you exported in the first step.
-
-The text in your report might change to match the default theme, but you can then access the text tab in the theme dialog box.
-
-Elements that are considered part of the interface can't be changed using a report theme, including the Filter, Format, and Data panes and the [visual matrix in visual calculations](../transform-model/desktop-visual-calculations-overview.md).
-
-**Reset to default** also removes formatting pane items controlling actions on buttons and images, all conditional formatting rules, images from URLs or data-bound fields, and other data-bound items such as reference labels.
+- Applying a built-in theme removes any customizations you already added to the report.
+- Importing a custom theme also removes any existing customizations you already added to the report.
+- You can add more options to a custom theme when you edit the `JSON` file directly.
 
 ## Related content
 
