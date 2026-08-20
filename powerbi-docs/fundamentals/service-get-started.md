@@ -204,6 +204,8 @@ Add a new page to your report. The new report page canvas is blank and shows the
 
 ### Create report visuals with Q&A
 
+For Q&A retirement information and recommended alternatives, see [Data sources for natural language Q&A](../natural-language/q-and-a-data-sources.md).
+
 For a quick exploration of your data, try asking a question in the Q&A question box. Q&A lets you ask natural-language queries about your data.
 
 In the Power BI service, you can find the Q&A question box in two places.
