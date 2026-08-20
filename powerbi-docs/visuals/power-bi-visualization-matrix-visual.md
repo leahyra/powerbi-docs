@@ -7,7 +7,7 @@ ms.reviewer: zoedouglas
 ms.service: powerbi
 ms.subservice: pbi-visuals
 ms.topic: how-to
-ms.date: 06/01/2026
+ms.date: 07/15/2026
 ai-usage: ai-assisted
 LocalizationGroup: Visualizations
 #customer intent: As a Power BI user, I want to learn about matrix visuals so that I can effectively and more easily build column chart visuals in Power BI Desktop and Power BI Service.
@@ -83,13 +83,17 @@ To follow along with the examples in this article, create a calculated table wit
 
 :::image type="content" source="media/power-bi-visualization-matrix-visual/power-bi-matrix-create.png" alt-text="Screenshot showing a matrix visual with Year and Quarter on rows, Subcategory and Product on columns, and Units Sold as values." lightbox="media/power-bi-visualization-matrix-visual/power-bi-matrix-create.png":::
 
-## Expand and collapse row headers
+## Expand and collapse row and column headers
 
-Use expand and collapse icons provided to combine groups or to show more detail.
+When a matrix has more than one field in the **Rows** or **Columns** field wells, use the expand and collapse icons on the headers to combine groups or to show more detail.
 
-:::image type="content" source="media/power-bi-visualization-matrix-visual/matrix-visual-expand-and-collapse-row-headers.png" alt-text="Screenshot showing the expand and collapse icons in the row headers of a matrix." lightbox="media/power-bi-visualization-matrix-visual/matrix-visual-expand-and-collapse-row-headers.png":::
+:::image type="content" source="media/power-bi-visualization-matrix-visual/matrix-visual-expand-and-collapse-column-headers.png" alt-text="Screenshot showing the expand and collapse icons in the row and column headers of a matrix." lightbox="media/power-bi-visualization-matrix-visual/matrix-visual-expand-and-collapse-column-headers.png":::
+
+To customize the color and size of the +/- icons on the row or column headers, use the **Row headers** > **+/- icons** or **Column headers** > **+/- icons** settings in the format pane.
 
 When report consumers open a matrix visual in [Explore](../consumer/explore-data-service.md), the columns and rows added to the visual are auto-expanded by default so consumers can see all the levels at once.
+
+### Auto-expand row and column headers
 
 Report authors also control auto-expand behavior directly in the format pane. Under **Column headers** > **Options** and **Row headers** > **Options**, toggle the **Auto expand** setting on or off. This setting is useful when the columns or rows on the matrix change dynamically, for example when you use [personalize visuals](../create-reports/power-bi-personalize-visuals.md?tabs=powerbi-desktop) or [field parameters](../create-reports/power-bi-field-parameters.md).
 
@@ -97,18 +101,16 @@ In [embedded scenarios](../developer/embedded/embedded-analytics-power-bi.md), y
 
 ## Freeze row headers
 
-By default row headers are frozen, which ensures they stay visible when you scroll horizontally.
+By default, row headers are frozen, which ensures they stay visible when you scroll horizontally.
 
 :::image type="content" source="media/power-bi-visualization-matrix-visual/matrix-visual-frozen-row-headers.png" alt-text="Screenshot showing a matrix visual with frozen row headers." lightbox="media/power-bi-visualization-matrix-visual/matrix-visual-frozen-row-headers.png":::
 
-To unfreeze row headers, and therefore hide them as you scroll horizontally, right-click on the row headers and select **Unfreeze row headers**. 
+To change the default freeze state for report consumers, turn the **Row headers** toggle on or off under **Layout** > **Freeze** in the format pane. When the toggle is off, the row headers hide as the matrix scrolls.
 
 :::image type="content" source="media/power-bi-visualization-matrix-visual/matrix-visual-unfrozen-row-headers.png" alt-text="Screenshot showing a matrix visual with unfrozen row headers." lightbox="media/power-bi-visualization-matrix-visual/matrix-visual-unfrozen-row-headers.png":::
 
-To refreeze the row headers, right-click on the row headers again and select **Freeze row headers**.
-
 > [!NOTE]
-> The freeze and unfreeze options in the right-click menu are transient and apply only to your current viewing session. If you change this setting in an editing scenario, such as Power BI Desktop or web editing, the change isn't saved for report consumers.
+> Report consumers can also right-click a matrix and select **Freeze row headers** or **Unfreeze row headers**. This right-click option is transient and applies only to the current viewing session.
 
 ## Adjust column width
 

@@ -523,6 +523,8 @@
       href: ../visuals/service-getting-started-with-color-formatting-and-axis-properties.md
     - name: Format pane General tab overview
       href: ../visuals/power-bi-visualization-format-pane-overview.md
+    - name: Use OneLake image and map files in reports
+      href: ../visuals/power-bi-onelake-files.md
     - name: Customize titles, backgrounds, and legends
       href: ../visuals/power-bi-visualization-customize-title-background-and-legend.md
     - name: Customize x-axis and y-axis

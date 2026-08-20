@@ -7,7 +7,7 @@ ms.reviewer: zoedouglas
 ms.service: powerbi
 ms.subservice: pbi-visuals
 ms.topic: how-to
-ms.date: 04/13/2026
+ms.date: 08/01/2026
 ai-usage: ai-assisted
 LocalizationGroup: Visualizations
 ---
@@ -177,18 +177,23 @@ Gridlines help readers trace values across the chart.
    - **Width**: Adjust line thickness
    - Toggle gridlines **On** or **Off**
 
-## Customize bar and column layout
+## Customize category and series layout
 
-For clustered bar and column charts, customize spacing and overlap in the **Columns** or **Bars** section of the **Format visual** pane.
+For column, bar, clustered, line, ribbon, and waterfall charts, customize spacing, outer padding, and overlap in the **Columns**, **Bars**, or **Lines** section of the **Format visual** pane.
 
 ### Spacing options
 
-- **Category spacing**: Space between each cluster. Increase to separate clusters, or decrease to fit more data.
-- **Series spacing**: Space between bars or columns within each cluster.
+Under **Layout**, adjust the following options:
+
+- **Outer padding**: Space between the edges of the plot area and the first and last categories. Set this value to **0%** to remove the padding along the edges of the visual.
+- **Space between categories**: Space between each category or cluster. Increase to separate categories, or decrease to fit more data.
+- **Space between series**: Space between bars or columns within each cluster.
+
+Set both **Outer padding** and **Space between categories** to **0%** to fill the entire plot area with your chart. This layout works well when the chart has a legend but no category axis - for example, a clustered column chart with the x-axis turned off. On line charts with categories, reducing outer padding also lets you show more data before a scrollbar appears.
 
 ### Overlap for direct comparison
 
-Enable **Overlap series** to stack bars or columns on top of each other instead of side by side. This layout is useful for comparing values directly, such as comparing this year to last year.
+For bar and column charts, enable **Overlap series** to stack bars or columns on top of each other instead of side by side. This layout is useful for comparing values directly, such as comparing this year to last year.
 
 When using overlap:
 

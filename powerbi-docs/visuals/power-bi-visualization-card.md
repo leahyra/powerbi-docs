@@ -85,7 +85,7 @@ To add images to your card visual:
 - **Add an image:** With the card visual selected, select the **Format visual** icon in the **Visualizations** pane. Under the **Visual** tab, expand the **Image** card. Select your card in the **Cards** dropdown, and then set the **Image** toggle to *on*. 
 - **Add a callout image**: From the **Visualizations** pane, select the **Format visual** icon. Under the **Visual** tab, expand the **Callout** card. Ensure your card is selected in the **Apply settings**, expand the **Image** controls, and then set the **Image** toggle to *on*. 
 
-For all image types, you can add by uploading from your local device, pasting an image URL, or selecting an image from a data column. You can also customize the fit of the image and choose different image effects to enhance its appearance.
+For all image types, you can add images by uploading from your local device, pasting an image URL (including [links to image files in OneLake](power-bi-onelake-files.md)), or selecting an image from a data column. You can also customize the fit of the image and choose different image effects to enhance its appearance.
 
 ### Image states
 
@@ -136,7 +136,7 @@ If you apply a custom format string but the value still shows a K, M, or B suffi
 Follow this walkthrough to build a comprehensive card visual step by step.
 
 > [!NOTE]
-> This walkthrough uses the [modern visual defaults preview](../create-reports/power-bi-reports-visual-defaults.md) turned on. Enable this feature in **Options** > **Preview features** > **Modern visual defaults and customize theme improvements** to match the examples shown.
+> This walkthrough uses the [Fluent 2 base theme](../create-reports/power-bi-reports-visual-defaults.md), the default for new reports.
 
 ### Sample data
 

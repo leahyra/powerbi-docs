@@ -7,7 +7,8 @@ ms.reviewer: ruiromano
 ms.service: powerbi
 ms.subservice: powerbi-developer
 ms.topic: concept-article
-ms.date: 12/15/2025
+ms.date: 08/18/2026
+ai-usage: ai-assisted
 ---
 
 # Power BI Desktop projects (PREVIEW)
@@ -155,7 +156,7 @@ All semantic model metadata is accessible to read. Write operations are fully su
 
 Keep in mind:
 
-- Any changes to open files made outside Power BI Desktop requires a restart for those changes to be shown in Power BI Desktop. Power BI Desktop isn't aware of changes to project files made by other tools.
+- When you save changes to project files outside Power BI Desktop, Power BI Desktop detects the changes and prompts you to apply them with a single click. You can also open the project directly in Visual Studio Code by using the built-in entry point in Power BI Desktop.
 
 - Automatic date tables created by Power BI Desktop shouldn't be changed by using external tools.
 
@@ -180,7 +181,7 @@ Use VS Code to map JSON schemas to the files being authored. JSON schemas for pr
 
 ## Considerations and limitations
 
-- Power BI Desktop isn't aware of changes made with other tools or applications. Changes made by using external tools require you to restart Power BI Desktop before those changes are shown.
+- Power BI Desktop detects changes you make by using other tools or applications and prompts you to apply them. A built-in entry point in Power BI Desktop opens the project directly in Visual Studio Code.
 - Sensitivity labels aren't supported with Power BI projects.
 - Diagram view is ignored when editing models in the Service.
 - When saving a PBIP, be aware that the maximum path length for project files is limited to 260 characters by default on Windows. Since PBIP files are stored as sub-folders and files, long object names such as table names can cause the total path length to exceed this limit, resulting in errors during save operations. To mitigate this risk, use a short folder path as the root location for your PBIP.
@@ -200,7 +201,7 @@ Use VS Code to map JSON schemas to the files being authored. JSON schemas for pr
 
 **Question:** Is Power BI Desktop aware of changes I make to the Power BI Project files from an external tool or application?
 
-**Answer:** No. Any change made to the files requires Power BI Desktop to be restarted to reflect those changes.
+**Answer:** Yes. Power BI Desktop detects changes made to project files and prompts you to apply them with a single click.
 
 **Question:** If I convert a PBIX to a PBIP, can I convert it back to PBIX?
 

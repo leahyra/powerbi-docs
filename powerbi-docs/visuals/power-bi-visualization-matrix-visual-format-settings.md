@@ -17,30 +17,50 @@ ai-usage: ai-assisted
 
 **Applies to:** [!INCLUDE [applies-to-desktop-service](../includes/applies-to-version/desktop-service.md)]
 
-This guide covers all matrix visual format settings in Power BI Desktop and the Power BI service. Use it to customize layouts, grid settings, column and row headers, subtotals, and more to present your data in the most effective way possible.
+This guide covers all matrix visual format settings available when you're editing a report in Power BI Desktop or the Power BI service. Use it to customize layouts, grid settings, column and row headers, subtotals, and more to present your data in the most effective way.
 
-## Prerequisites
+## Tips for formatting a matrix
 
-# [Power BI Desktop](#tab/powerbi-desktop)
+Use the following tips to fine-tune the appearance of your matrix.
 
-To format and customize your matrix visual in **Power BI Desktop**, select the **Format visual** icon in the **Visualizations Pane**. This selection grants access to the vast array of formatting options under the **Visual** and **General** tabs, enabling you to refine both the appearance and functionality of your matrix visuals.
+### Turn off bold labels on subtotals and totals
 
-   :::image type="content" source="../visuals/media/power-bi-visualization-matrix-visual/matrix-visual-format-settings-desktop.png" alt-text="Screenshot of Power BI Desktop showing a formatted matrix visual on the report canvas, with the Visualizations pane, Format visual icon, and Visual and General tabs highlighted." lightbox="media/power-bi-visualization-matrix-visual/matrix-visual-format-settings-desktop.png":::
+By default, row labels appear bold when they display in-line with subtotals or totals in the compact layout. To turn off the bold formatting:
 
-# [Power BI Service](#tab/powerbi-service)
+1. In the format pane, expand **Row grand total**, **Column grand total**, **Row subtotals**, or **Column subtotals**.
+1. Expand the **Values** card and turn off the bold font style.
+1. Turn on the **Apply to labels** toggle.
 
-To format and customize your matrix visual in the **Power BI service**, select the **Format visual** icon in the **Visualizations Pane**. This selection grants access to the vast array of formatting options under the **Visual** and **General** tabs, enabling you to refine both the appearance and functionality of your matrix visuals.
+The row labels no longer appear bold. This tip is helpful when you want a mixed state of expand and collapse without the bold differentiating them.
 
-   :::image type="content" source="../visuals/media/power-bi-visualization-matrix-visual/matrix-visual-format-settings-service.png" alt-text="Screenshot of Power BI service showing a formatted matrix visual on the report canvas, with the Visualizations pane, Format visual icon, and Visual and General tabs highlighted." lightbox="media/power-bi-visualization-matrix-visual/matrix-visual-format-settings-service.png":::
+:::image type="content" source="media/power-bi-visualization-matrix-visual/matrix-visual-tip-turn-off-bold-totals.png" alt-text="Screenshot showing a matrix with bold formatting turned off on subtotals and totals labels." lightbox="media/power-bi-visualization-matrix-visual/matrix-visual-tip-turn-off-bold-totals.png":::
 
----
+### Show columns side by side instead of hierarchically
 
-> [!NOTE]
-> [!INCLUDE [prerequisites-share-your-report](../includes/core-visuals/prerequisites-share-your-report.md)]
+By default, the matrix uses the compact layout, which nests hierarchies with indentation in a single column. To display each level of the hierarchy in its own column:
+
+1. In the format pane, expand **Layout** > **Matrix layout**.
+1. Select **Outline** or **Tabular**:
+   - **Outline** shows totals at the top of each group.
+   - **Tabular** shows each hierarchy level in its own column with no indentation.
+1. To move totals to the bottom in the outline layout, expand **Row subtotals** > **Rows** and change **Position** to **Bottom**.
+
+:::image type="content" source="media/power-bi-visualization-matrix-visual/matrix-visual-tip-matrix-layouts.png" alt-text="Screenshot showing the Compact, Outline, and Tabular matrix layouts side by side." lightbox="media/power-bi-visualization-matrix-visual/matrix-visual-tip-matrix-layouts.png":::
+
+### Freeze or unfreeze row headers
+
+By default, row headers stay visible when consumers scroll horizontally. You can turn this behavior on or off for different form factors. This option is useful when a matrix appears in both desktop and mobile layouts.
+
+1. In the format pane, expand **Layout** > **Freeze**.
+1. Turn the **Row headers** toggle on or off.
+
+Consider unfreezing row headers for mobile layouts, where portrait orientation limits horizontal space, and keeping them frozen for desktop layouts, which typically use landscape orientation. Report consumers can also right-click a matrix to transiently freeze or unfreeze the row headers for their current viewing session.
+
+:::image type="content" source="media/power-bi-visualization-matrix-visual/matrix-visual-tip-unfreeze-row-headers-for-mobile.png" alt-text="Screenshot showing a matrix with row headers unfrozen for a mobile layout." lightbox="media/power-bi-visualization-matrix-visual/matrix-visual-tip-unfreeze-row-headers-for-mobile.png":::
 
 ## Format settings for matrix visuals
 
-### Layout and style presets
+### Style presets
 
 #### Style
 
@@ -56,8 +76,44 @@ Use the Style setting to choose from a set of predefined styles with unique comb
 - **Bold header flashy rows**
 - **Sparse**
 - **Condensed**
+- **None sparse**
+- **None condensed**
 
-#### Layout
+### Layout
+
+#### Freeze
+
+Use the Freeze settings to control whether row headers stay visible when consumers scroll horizontally.
+
+##### Row headers
+
+Turn on this toggle to keep the row headers visible when the matrix scrolls horizontally. Turn off this toggle to hide the row headers as the matrix scrolls. Report consumers can also right-click a matrix to transiently freeze or unfreeze the row headers for their current viewing session.
+
+#### Column width
+
+Use the **Column width** settings to control how columns size, set a default width, and customize widths for individual columns.
+
+##### Auto-size behavior
+
+Choose how columns size to fit the visual:
+
+- **Fit to content:** Columns are as wide as they need to be to show the data, assuming there's room in the visual container.
+- **Grow to fit:** Columns automatically expand to fill the visual container for a more balanced layout. Any leftover horizontal space is distributed evenly to each column.
+- **Fixed width:** Columns use a width that you specify. When you select this option, a **Default width** input appears so you can set the width for all columns and for any new columns added to the visual.
+
+##### Default width
+
+When **Auto-size behavior** is set to **Fixed width**, set a **Default width** in pixels. With **Custom widths** off, all columns use this uniform width. New columns added to the visual also use this default width.
+
+##### Custom widths
+
+Turn on this toggle to see and customize the width of any column directly from the format pane. If the visual has fewer than 15 columns, each column appears with its own width input. If the visual has 15 or more columns, an **Apply settings to** dropdown appears. Columns that already have a custom width are marked with an asterisk (*). Width inputs that show *(auto)* indicate the column is using the auto-size behavior rather than a custom width.
+
+Turn off this toggle to clear any custom widths on the matrix.
+
+#### Matrix layout
+
+##### Layout
 
 The Layout menu offers three options for customizing the presentation of your data:
 
@@ -65,11 +121,11 @@ The Layout menu offers three options for customizing the presentation of your da
 - **Outline:** Each level of the hierarchy appears in its own column. This layout works like a traditional pivot table, so it's easy to read and understand the hierarchy at a glance.
 - **Tabular:** Similar to the outline layout but without indentation. Each hierarchy level is still in its own column, but the data is presented in a flat structure.
 
-#### Repeat row headers
+##### Repeat row headers
 
 This toggle controls whether the row headers repeat on each page of a paginated report. When enabled, the row headers appear at the top of each page. This setting helps maintain context when a matrix spans multiple pages.
 
-### Grid settings
+### Grid
 
 #### Horizontal gridlines
 
@@ -85,7 +141,7 @@ Turn on the **Vertical gridlines** toggle to add lines vertically across the cha
 [!INCLUDE [global-color-palette](../includes/core-visuals/global-color-palette.md)]
 [!INCLUDE [global-width-1-10](../includes/core-visuals/global-width-1-10.md)]
 
-#### Grid border
+#### Border
 
 Use the **Border** settings to customize the appearance of the borders around the matrix and its individual sections.
 
@@ -98,7 +154,7 @@ Use this menu to define the borders for different sections of the matrix. Here's
 - **Row header:** Applies the border settings exclusively to the row headers of the matrix.
 - **Values section:** Applies the border settings only to the area of the matrix where the data values are displayed.
 
-##### Grid border position
+##### Position
 
 Choose from four options to specify the position of the border:
 
@@ -110,7 +166,7 @@ Choose from four options to specify the position of the border:
 [!INCLUDE [global-color-palette](../includes/core-visuals/global-color-palette.md)]
 [!INCLUDE [global-width-1-10](../includes/core-visuals/global-width-1-10.md)]
 
-#### Grid options
+#### Options
 
 The **Options** menu includes options for row padding and global font size. Adjust the spacing and text size within the matrix visual.
 
@@ -122,20 +178,22 @@ This setting controls the amount of space between rows. It often makes the matri
 
 This setting changes the font size for all text within the matrix visual. Increasing the font size can improve readability, especially when presenting to an audience or for users with visual impairments. Decreasing it can allow more data to be displayed on the screen.
 
-### Blank rows settings
+### Blank rows
 
 Use the **Blank rows** toggle to add blank rows within the matrix. These blank rows separate higher-level row header categories, which can make the report easier to read and better organized. When you turn on this feature, you can customize the appearance of these rows by using the available settings.
+
+#### Color
 
 [!INCLUDE [global-color-palette](../includes/core-visuals/global-color-palette.md)]
 [!INCLUDE [global-transparency](../includes/core-visuals/global-transparency.md)]
 
-#### Blank rows border
+#### Border
 
-Use the **Border** settings to customize the appearance of the borders around the matrix and its individual sections.
+Use the **Border** settings to customize the appearance of the borders around the blank rows.
 
-##### Blank rows border position
+##### Position
 
-Choose from four options to specify the position of the border:
+Choose from three options to specify the position of the border:
 
 - **Top**
 - **Bottom**
@@ -145,9 +203,9 @@ Choose from four options to specify the position of the border:
 [!INCLUDE [global-transparency](../includes/core-visuals/global-transparency.md)]
 [!INCLUDE [global-width-1-10](../includes/core-visuals/global-width-1-10.md)]
 
-### Values settings
+### Values
 
-#### Values text and color
+#### Text
 
 [!INCLUDE [global-font-controls](../includes/core-visuals/global-font-controls.md)]
 [!INCLUDE [global-text-color](../includes/core-visuals/global-text-color.md)]
@@ -165,15 +223,15 @@ Select a color from the palette to customize the color for alternating rows.
 
 Turn on this toggle to display longer text on multiple lines within a cell, so the text doesn't get cut off.
 
-#### Values options
+#### Options
 
 ##### Switch values to rows
 
 Turn on this toggle to switch the display of your values from columns to rows within the matrix.
 
-### Column headers settings
+### Column headers
 
-#### Column headers text
+#### Text
 
 [!INCLUDE [global-font-controls](../includes/core-visuals/global-font-controls.md)]
 [!INCLUDE [global-text-color](../includes/core-visuals/global-text-color.md)]
@@ -188,19 +246,23 @@ This setting controls the header alignment. Choose left, center, or right.
 This setting controls the title alignment. Choose left, center, or right.
 [!INCLUDE [global-text-wrap](../includes/core-visuals/global-text-wrap.md)]
 
-#### Column width
+#### +/- icons
 
-[!INCLUDE [tablix-columns-resize](../includes/core-visuals/tablix-columns-resize.md)]
+[!INCLUDE [global-color-palette](../includes/core-visuals/global-color-palette.md)]
 
-#### Column headers options
+##### Expand/collapse icon size
+
+Use this setting to customize the size, offering a range of 8 to 60 pixels.
+
+#### Options
 
 ##### Auto expand
 
-Turn on this toggle to automatically expand all column header levels when the visual loads. When disabled, column headers start collapsed and users can expand them manually. For more information, see [Expand and collapse row headers](power-bi-visualization-matrix-visual.md#expand-and-collapse-row-headers).
+Turn on this toggle to automatically expand all column header levels when the visual loads. When disabled, column headers start collapsed and users can expand them manually. For more information, see [Expand and collapse row and column headers](power-bi-visualization-matrix-visual.md#expand-and-collapse-row-and-column-headers).
 
-### Row headers settings
+### Row headers
 
-#### Row headers text
+#### Text
 
 [!INCLUDE [global-font-controls](../includes/core-visuals/global-font-controls.md)]
 [!INCLUDE [global-text-color](../includes/core-visuals/global-text-color.md)]
@@ -212,12 +274,6 @@ When you turn on this toggle, it extends the color settings from the Values sect
 [!INCLUDE [global-alignment-text-values](../includes/core-visuals/global-alignment-text-values.md)]
 [!INCLUDE [global-text-wrap](../includes/core-visuals/global-text-wrap.md)]
 
-#### Row headers options
-
-##### Auto expand
-
-Turn on this toggle to automatically expand all row header levels when the visual loads. When disabled, row headers start collapsed and users can expand them manually. For more information, see [Expand and collapse row headers](power-bi-visualization-matrix-visual.md#expand-and-collapse-row-headers).
-
 #### +/- icons
 
 [!INCLUDE [global-color-palette](../includes/core-visuals/global-color-palette.md)]
@@ -226,11 +282,17 @@ Turn on this toggle to automatically expand all row header levels when the visua
 
 Use this setting to customize the size, offering a range of 8 to 60 pixels.
 
-### Column subtotals settings
+#### Options
+
+##### Auto expand
+
+Turn on this toggle to automatically expand all row header levels when the visual loads. When disabled, row headers start collapsed and users can expand them manually. For more information, see [Expand and collapse row and column headers](power-bi-visualization-matrix-visual.md#expand-and-collapse-row-and-column-headers).
+
+### Column subtotals
 
 The **Column subtotals** toggle controls whether subtotals appear for columns in your matrix. When you turn it on, Power BI calculates and displays subtotals for each column based on the underlying data. Turn off this toggle if you want to hide column subtotals. To find this setting, select the **Format visual** icon in the **Visualizations** pane, then expand **Column subtotals**.
 
-#### Column subtotals: Apply settings to
+#### Apply settings to
 
 ##### Per column level
 
@@ -245,18 +307,18 @@ Use this menu to set subtotal options for the entire column.
 [!INCLUDE [column-row-subtotals-show-subtotal](../includes/core-visuals/column-row-subtotals-show-subtotal.md)]
 [!INCLUDE [column-row-subtotals-subtotal-label](../includes/core-visuals/column-row-subtotals-subtotal-label.md)]
 
-#### Column subtotals text and color
+#### Values
 
 [!INCLUDE [global-font-controls](../includes/core-visuals/global-font-controls.md)]
 [!INCLUDE [global-text-color](../includes/core-visuals/global-text-color.md)]
 [!INCLUDE [global-background-color](../includes/core-visuals/global-background-color.md)]
 [!INCLUDE [global-apply-to-labels](../includes/core-visuals/global-apply-to-labels.md)]
 
-### Row subtotals settings
+### Row subtotals
 
 The **Row subtotals** toggle controls whether subtotals appear for rows in your matrix. When you turn it on, Power BI calculates and displays subtotals for each row based on the underlying data. Turn off this toggle if you want to hide row subtotals. To find this setting, select the **Format visual** icon in the **Visualizations** pane, then expand **Row subtotals**. Row and column subtotals apply to the matrix visual, which groups data into nested rows and columns. The table visual displays a single grand total row rather than subtotals.
 
-#### Row subtotals: Apply settings to
+#### Apply settings to
 
 ##### Per row level
 
@@ -271,32 +333,32 @@ Use this menu to set subtotal options for the entire row hierarchy.
 [!INCLUDE [column-row-subtotals-show-subtotal](../includes/core-visuals/column-row-subtotals-show-subtotal.md)]
 [!INCLUDE [column-row-subtotals-subtotal-label](../includes/core-visuals/column-row-subtotals-subtotal-label.md)]
 
-##### Subtotal label position
+##### Position
 
-Specify the position of the Subtotal labels:
+Specify the position of the subtotal labels:
 
 - **Top**
 - **Bottom**
 
-#### Row subtotals text and color
+#### Values
 
 [!INCLUDE [global-font-controls](../includes/core-visuals/global-font-controls.md)]
 [!INCLUDE [global-text-color](../includes/core-visuals/global-text-color.md)]
 [!INCLUDE [global-background-color](../includes/core-visuals/global-background-color.md)]
 [!INCLUDE [global-apply-to-labels](../includes/core-visuals/global-apply-to-labels.md)]
 
-### Column grand total settings
+### Column grand total
 
-#### Column grand total text and color
+#### Values
 
 [!INCLUDE [global-font-controls](../includes/core-visuals/global-font-controls.md)]
 [!INCLUDE [global-text-color](../includes/core-visuals/global-text-color.md)]
 [!INCLUDE [global-background-color](../includes/core-visuals/global-background-color.md)]
 [!INCLUDE [global-apply-to-labels](../includes/core-visuals/global-apply-to-labels.md)]
 
-### Row grand total settings
+### Row grand total
 
-#### Row grand total text and color
+#### Values
 
 [!INCLUDE [global-font-controls](../includes/core-visuals/global-font-controls.md)]
 [!INCLUDE [global-text-color](../includes/core-visuals/global-text-color.md)]
@@ -318,9 +380,9 @@ If you don't explicitly set the grand total background color, the grand total in
 > [!NOTE]
 > These color inheritance behaviors are currently under review and might change in future versions. To avoid unintended styling, always **explicitly define** any grand total colors.
 
-### Specific column settings
+### Specific column
 
-#### Specific column: Apply settings to
+#### Apply settings to
 
 ##### Specific column series
 
@@ -342,7 +404,7 @@ Similar to subtotals, this option lets you format the total row (if you have one
 
 When turned on, this toggle applies formatting rules to the actual data values within the matrix cells. You can set up conditional formatting, color scales, or other visual cues based on the data values.
 
-#### Specific column text and color
+#### Values
 
 [!INCLUDE [global-text-color](../includes/core-visuals/global-text-color.md)]
 [!INCLUDE [global-background-color](../includes/core-visuals/global-background-color.md)]
@@ -362,11 +424,13 @@ The menu offers several options for defining the display units:
 
 Specify the number of decimal places for values, with a selectable range from 0 to 15.
 
-### Cell elements settings
+### Cell elements
 
-#### Cell elements: Apply settings to
+Use the **Cell elements** settings to apply conditional formatting to values in your matrix. For more information, see [Conditional formatting in Power BI visuals](power-bi-visualization-conditional-formatting.md).
 
-##### Cell elements series
+#### Apply settings to
+
+##### Series
 
 Select the data series that you want to apply formatting options to.
 
@@ -384,27 +448,27 @@ When you turn on this toggle, you can use conditional formatting to create horiz
 
 ##### Icons
 
-When you turn on this toggle, you can use conditional formatting to add visual indicators from a predefined set of icons or custom icons. For example, an up arrow for positive growth and a down arrow for negative growth.
+Turn on this toggle to use conditional formatting to add visual indicators from a predefined set of icons or custom icons. For example, an up arrow for positive growth and a down arrow for negative growth. By using the **Field value** format style, you can also point to a column of image URLs, including [links to image files in OneLake](power-bi-onelake-files.md), to display custom icons.
 
 ##### Web URL
 
 When you turn on this toggle, you can use conditional formatting to embed web URLs, creating clickable links that lead to external websites or internal resources. For instance, link a product name to its detailed page on an internal or external website.
 
-### URL icon settings
+### URL icon
 
-#### URL icon values
+#### Values
 
 When you turn on this toggle, you can create hyperlinks within individual cells. You can associate a URL field with specific data points for users to navigate to external web pages or resources.
 
-#### URL icon: Column headers
+#### Column headers
 
 When you turn on this toggle, you can replace the column header text with a clickable hyperlink icon. This replacement is useful when you want to link to additional information related to the column or provide context-specific URLs.
 
-#### URL icon: Row headers
+#### Row headers
 
 When you turn on this toggle, you can replace the row header text with a clickable hyperlink icon. Users can click on the icon to access relevant URLs associated with each row.
 
-### Image size settings
+### Image size
 
 #### Height
 
@@ -413,6 +477,61 @@ Use this setting to define the height of the image, offering a range of 8 to 512
 #### Width
 
 Use this setting to define the width of the image, offering a range of 8 to 512 pixels.
+
+### Sparklines
+
+#### Apply settings to
+
+##### Sparkline
+
+Use this dropdown to select the sparkline you want to format.
+
+#### Sparkline
+
+##### Chart type
+
+Choose the visual style for the sparkline:
+
+- **Line**
+- **Column**
+
+##### Data color
+
+Select a color for the sparkline data.
+
+[!INCLUDE [global-color-palette](../includes/core-visuals/global-color-palette.md)]
+
+##### Width
+
+Adjust the thickness of the sparkline line or the width of the columns.
+
+#### Marker
+
+##### Show these markers
+
+Turn on markers to highlight specific points on the sparkline:
+
+- **Every point**
+- **Highest**
+- **Lowest**
+- **First**
+- **Last**
+- **Negative**
+- **Isolated**
+
+##### Color
+
+Select a color for the markers.
+
+[!INCLUDE [global-color-palette](../includes/core-visuals/global-color-palette.md)]
+
+##### Type
+
+Choose a basic shape for the marker, such as circle, square, or others.
+
+##### Size
+
+Adjust the size of the markers.
 
 ## Related content
 

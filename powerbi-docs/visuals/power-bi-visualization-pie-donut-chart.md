@@ -7,9 +7,10 @@ ms.reviewer: miguelmyers
 ms.service: powerbi
 ms.subservice: pbi-visuals
 ms.topic: how-to
-ms.date: 10/01/2025
+ms.date: 07/24/2026
 ms.custom: sample-retailanalysissample
 LocalizationGroup: Visualizations
+ai-usage: ai-assisted
 ---
 # Create and use pie and donut charts in Power BI
 
@@ -61,6 +62,36 @@ For this example, create a **Pie chart** from the **Visualizations** pane. You c
    :::image type="content" source="media/pie-donut-chart/pie-donut-data-pane.png" alt-text="Screenshot of Power BI Desktop showing the Data pane with fields being added to the pie chart.":::
 
 1. To customize your line chart, select the **Format icon** in the **Visualizations Pane**. The **Format pane** grants you access to all available formatting options under the **Visual** tab and the **General** tab. This step allows you to tailor the chart's appearance and functionality to your specific requirements.
+
+## Add a center value to a donut chart
+
+Donut charts can display a value in the center of the ring, so you don't need to overlay a separate card visual to show a summary number. When you turn on the center value, the donut displays it right in the middle. Because the value lives inside the visual, it stays aligned when you resize the chart and works consistently across mobile layouts, dashboards, and screen readers.
+
+> [!NOTE]
+> The center value is available for donut charts only. It isn't supported on pie charts.
+
+To add a center value:
+
+1. Select the donut chart on the report canvas.
+1. In the **Visualizations** pane, select the **Format** icon to open the **Format pane**.
+1. Under the **Visual** tab, turn on **Center value**. The donut displays the total of the charted values in the center.
+
+   :::image type="content" source="media/pie-donut-chart/pie-donut-center-value.png" alt-text="Screenshot of a Power BI donut chart with the center value turned on, showing the total in the middle of the donut.":::
+
+### Customize the center value
+
+Use the **Format pane** to control how the center value appears:
+
+- **Value format and display units**: Set the number format and choose display units, such as thousands (K), millions (M), or billions (B).
+- **Font**: Change the font family, size, color, and style of the value.
+- **Label**: Add an optional label above or below the value. By default, the label shows the measure name, and you can replace it with your own text.
+- **Image**: Place an image above or below the value.
+- **Background**: Fill the center of the donut with a solid color or set a background image behind the value.
+- **Custom measure**: When you need something other than the total, select **Add data** under **Value** > **Field** and add a measure to display it in the center instead.
+
+### Keep the center value in sync with your data
+
+The center value updates automatically as you interact with the report. Filtering, cross-highlighting, drilling down, and selecting a slice all update the value to reflect the current context.
 
 ## Drill into pie and donut charts
 
@@ -142,6 +173,10 @@ This section provides an updated list of known pie and donut chart consideration
   - Conditional formatting isn't officially supported for pie and donut charts. However, some users discovered a workaround: by applying conditional formatting rules to a column chart and then converting it to a pie or donut chart, the slices retain the formatting. This behavior is unofficial and might not be consistent across all scenarios.
 - **Style considerations**:
   - Increasing the slice border thickness excessively can make it difficult to distinguish individual slices, especially when color contrast is low. Use borders judiciously to enhance separation between slices. When applied properly, borders can significantly improve accessibility and visual clarity.
+- **Center value**:
+  - The center value is available for donut charts only. It isn't supported on pie charts.
+  - The center value is always positioned in the middle of the donut. You can't move it to a custom location.
+  - When the donut has no data or the center is too small to display the value legibly, the center value is hidden.
 
 ## Related content
 

@@ -8,7 +8,7 @@ ms.custom:
 ms.service: powerbi
 ms.subservice: pbi-reports-dashboards
 ms.topic: how-to
-ms.date: 11/07/2025
+ms.date: 08/01/2026
 ai-usage: ai-assisted
 LocalizationGroup: Visualizations
 # customer intent: As a Power BI user, I want to find out how to configure Power BI Desktop to display images, not the URLs of image links, so that I can add dynamic images to my reports.
@@ -65,11 +65,19 @@ Power BI mobile apps don't support such images. For the Power BI mobile apps to 
 
    :::image type="content" source="media/power-bi-images-tables/power-bi-onedrive-embed-copy-url.png" alt-text="Screenshot of the Embed window that shows an image of farmland and a URL. The Copy embed code button is highlighted." lightbox="media/power-bi-images-tables/power-bi-onedrive-embed-copy-url.png":::
 
+### Add images from OneLake
+
+You can also use [links to image files stored in OneLake](../visuals/power-bi-onelake-files.md). OneLake file links work even though they require authentication - Power BI signs in on your behalf when the report loads.
+
+1. In OneLake or a lakehouse, locate the image file you want to use.
+1. Copy the file's URL (for example, `https://onelake.dfs.fabric.microsoft.com/{workspace-id}/{item-id}/Files/{path-to-image}`).
+1. Paste the URL in the **Image URL** column in your data.
+
 ## Considerations
 
 - The image needs to be in one of these file formats: BMP, JPG, JPEG, GIF, PNG, or SVG.
-- The URL must be anonymously accessible. It can't lead to a site that requires a sign-in, such as SharePoint or OneDrive for work or school.
-- The Power BI mobile apps display the image only if the image URL is anonymously accessible. The image can't be hosted on a site that requires a sign-in, such as SharePoint, even if you can access the image in Power BI Desktop or in the service.
+- The URL must be anonymously accessible, with two exceptions: OneDrive for home embed codes and OneLake file links. Other sites that require sign-in, such as SharePoint or OneDrive for work or school, aren't supported.
+- The Power BI mobile apps display the image only if the image URL is anonymously accessible or is a OneLake file link.
 
 ## Related content
 

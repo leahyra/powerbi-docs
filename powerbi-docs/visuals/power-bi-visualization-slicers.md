@@ -25,7 +25,7 @@ Power BI offers multiple slicer visuals, each designed for different filtering s
 
 The **Slicer** visual is a versatile filtering control that supports multiple settings including vertical list, tile, dropdown, and date picker. It works with text, numeric, and date data types and provides familiar filtering interactions.
 
-The **Date picker** setting (preview) enables relative date selections that automatically roll forward as time passes. When you set a selection like "last full month," the slicer recalculates the date range each time the report loads.
+The **Date picker** setting enables relative date selections that automatically roll forward as time passes. When you set a selection like "last full month," the slicer recalculates the date range each time the report loads.
 
 For detailed guidance, see [Slicer visual in Power BI](power-bi-visualization-slicer-visual.md).
 
