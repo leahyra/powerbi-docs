@@ -114,6 +114,16 @@ Some of these capabilities are available through the Copilot pane, whereas other
 
 :::image type="content" source="media/copilot-introduction/copilot-build-reports.png" alt-text="Screenshot of Copilot building a report in Power BI." lightbox="media/copilot-introduction/copilot-build-reports.png":::
 
+### Copilot for semantic model authors: Analyze and improve your semantic models
+
+Model authors can use [Copilot in web modeling (preview)](../transform-model/copilot-web-modeling.md) in many ways, including the following:
+
+- Identify problems like unclear structures and inconsistent naming
+- Get best-practice recommendations for improving your model's design
+- Edit your existing model by refining DAX business measures and managing tables, columns, relationships
+
+:::image type="content" source="../transform-model/media/copilot-web-modeling/copilot-entry-point.png" alt-text="Screenshot of how semantic model authors can use Copilot to analyze and improve semantic models in Power BI." lightbox="../transform-model/media/copilot-web-modeling/copilot-entry-point.png"
+
 ## Clear the Copilot chat
 
 The **clear chat** button removes the contents of the current conversation and any previous context set throughout the conversation. This action is essentially the same as starting a new chat. This action doesn't refresh the underlying data.
@@ -191,6 +201,14 @@ These requirements pertain to using [app-scoped Copilot in Power BI apps](copilo
 
 > [!NOTE]
 > **Copilot in apps is on by default** and you can manage it per app.
+
+### Requirements for Copilot in web modeling (preview)
+These requirements pertain to using [Copilot in web modeling](../transform-model/copilot-web-modeling.md):
+
+- Meet the [**general requirements for Copilot**](#general-requirements), and your semantic model must be in a workspace linked to either [Premium Power BI (P1 and above)](../enterprise/service-premium-features.md) or a paid [Fabric](/fabric/enterprise/licenses) capacity.
+- You need *write access* to the semantic model to query the model by using Copilot in web modeling.
+- You need to be in *Editing mode* in the model view to see the Copilot in web modeling enabled. When in *Viewing mode*, the Copilot icon is disabled. 
+
 
 ## Power BI Copilot compute usage
 
