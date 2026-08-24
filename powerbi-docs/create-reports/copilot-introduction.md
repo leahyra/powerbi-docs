@@ -122,7 +122,7 @@ Model authors can use [Copilot in web modeling (preview)](../transform-model/cop
 - Get best-practice recommendations for improving your model's design
 - Edit your existing model by refining DAX business measures and managing tables, columns, relationships
 
-:::image type="content" source="../transform-model/media/copilot-web-modeling/copilot-entry-point.png" alt-text="Screenshot of Copilot building a report in Power BI." lightbox="../transform-model/media/copilot-web-modeling/copilot-entry-point.png" alt-text="Screenshot of Copilot building a report in Power BI.":::
+:::image type="content" source="../transform-model/media/copilot-web-modeling/copilot-entry-point.png" alt-text="Screenshot of Copilot building a report in Power BI." lightbox="../transform-model/media/copilot-web-modeling/copilot-entry-point.png"
 
 ## Clear the Copilot chat
 
