@@ -205,9 +205,9 @@ These requirements pertain to using [app-scoped Copilot in Power BI apps](copilo
 ### Requirements for Copilot in web modeling (preview)
 These requirements pertain to using [Copilot in web modeling](../transform-model/copilot-web-modeling.md):
 
-- Meet the [**general requirements for Copilot**](#general-requirements), and your semantic model must be located in a workspace linked to either [Premium Power BI (P1 and above)](../enterprise/service-premium-features.md) or a paid [Fabric](/fabric/enterprise/licenses) capacity.
-- You need *write access* to the semantic model to query the model using Copilot in web modeling
-- You need to be in *Editing mode* in the model view to see the Copilot in web modeling enabled. When in *Viewing mode*, the Copilot icon will be disabled. 
+- Meet the [**general requirements for Copilot**](#general-requirements), and your semantic model must be in a workspace linked to either [Premium Power BI (P1 and above)](../enterprise/service-premium-features.md) or a paid [Fabric](/fabric/enterprise/licenses) capacity.
+- You need *write access* to the semantic model to query the model by using Copilot in web modeling.
+- You need to be in *Editing mode* in the model view to see the Copilot in web modeling enabled. When in *Viewing mode*, the Copilot icon is disabled. 
 
 
 ## Power BI Copilot compute usage
